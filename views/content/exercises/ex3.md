@@ -1,0 +1,88 @@
+In dieser Übung lernen wie ein Eingabe Element kennen, den Taster. In der folgenden Übung wird der Zusatnd eines Tasters abgefragt und der Zustand über die LED und die Konsole angezeigt.
+
+Es werden neben Bauteile aus den beiden vorhergehenden Übungen ein Taster und ein Pull Up Widerstand benötigt. Der Taster wird am Analog Eingang A0 angeschlossen, die LED wie vorher auch an Pin 13. 
+
+**Vor dem Zusammenbau ist es notwendig das Arduino Board vom PC zu trennen. Das ist ebenso immer notwendig, wenn Bauteile entfernt oder dazugefügt werden.**
+
+Wenn alles zusammenbaut ist, kann der Arduino wieder mit dem PC verbunden werden. Danach wird das Programm aus dem `node-ardx-de` Verzeichnis über die folgende Kommadozeile gestarted:
+
+`node code/03-code-button.js`
+
+Drücke `Control-D` um das Program zu beenden.
+
+<a id="parts"></a>
+## Teileliste
+
+* Arduino Micro
+* Steckplatine
+* Drahtbrücken Set
+* 5mm LED 
+* Taster 10x10mm
+* 560 Ohm Widerstand (grün-blau-braun)
+* 2,2 kOhm Widerstand (rot-rot-rot)
+
+<a id="circuit"></a>
+## Schaltplan und Verdrahtung
+[<img style="max-width:500px" src="../../images/circ/03-LED-Button_Steckplatine.png" alt="Verdrahtung"/>]
+
+<a id="code"></a>
+## Programm
+
+Das Javascript Programm befindet sich unter `code/02-code-led-pwm.js`
+
+    var five = require("johnny-five"),
+      button, led;
+
+    five.Board().on("ready", function() {
+
+      button = new five.Button({
+        pin: "A0",
+        invert: true  // Taster ist active low
+      });
+ 
+      led = new five.Led(13);
+
+      button.on("up", function(){
+        led.off();
+        console.log("up");
+     });
+
+      button.on("hold", function(){
+        console.log("hold");
+     });
+
+      button.on("down", function(){
+        led.on();
+        console.log("down");
+      });
+    });
+	
+<a id="troubleshooting"></a>
+## Fehlersuche
+
+### Taste funktioniert nicht
+
+Die Tasten geben manchmal schlechten Kontakt, wenn sie auf das Steckbrett gesteckt werden. VIelleicht noch einmal fest auf die Taste drücken, damit der Kontakt besser wird 
+
+### LED leuchtet nicht
+
+Dioden sind gepolte Bauelemente. D.h. sie funktionieren nur in eine Richtung. Versuche die LED um 180° zu drehen (keine Sorge, die LED geht nicht kaputt, wenn sie falsch gepolt eingebaut wurde).
+
+
+###  Das Programm meldet 'No USB devices detected'
+
+Stelle sicher, dass das Arduino mit dem Computer über USB verbunden ist.
+
+### es funktioniert immer noch nicht
+
+Es kommt vor das Johnny-Five nicht mit dem Arduino über den USB COM Port kommunizieren kann. Stelle sicher, das die Arduino IDE beendet wurde. Wenn das Probelm immer noch besteht, kann man das Programm so ändern, dass Johnny-Five den richtigen USB COM Port verwendet:
+
+    var board = new j5.Board({port:'COM7'});
+
+<a id="extending"></a>
+## Programm erweitern
+
+<a id="more"></a>
+## Mehr Informationen
+
+http://johnny-five.io/api/button/

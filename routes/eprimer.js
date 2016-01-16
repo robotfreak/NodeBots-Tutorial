@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Arduino Tutorial mit node.js' });
+  res.render('eprimer', { title: 'Einführung in die Elektronik' });
 });
-
 module.exports = router;
