@@ -6,11 +6,12 @@ Es werden neben Bauteile aus den beiden vorhergehenden Übungen ein Taster und e
 
 Wenn alles zusammenbaut ist, kann der Arduino wieder mit dem PC verbunden werden. Danach wird das Programm aus dem `node-ardx-de` Verzeichnis über die folgende Kommadozeile gestarted:
 
-`node code/03-code-button.js`
+```shell
+node code/03-code-button.js
+```
 
 Drücke `Control-D` um das Program zu beenden.
 
-<a id="parts"></a>
 ## Teileliste
 
 * Arduino Micro
@@ -21,43 +22,42 @@ Drücke `Control-D` um das Program zu beenden.
 * 560 Ohm Widerstand (grün-blau-braun)
 * 2,2 kOhm Widerstand (rot-rot-rot)
 
-<a id="circuit"></a>
 ## Schaltplan und Verdrahtung
 [<img style="max-width:500px" src="../../images/circ/03-LED-Button_Steckplatine.png" alt="Verdrahtung"/>]
 
-<a id="code"></a>
 ## Programm
 
-Das Javascript Programm befindet sich unter `code/02-code-led-pwm.js`
+Das Javascript Programm befindet sich unter `code/03-code-button.js`
 
-    var five = require("johnny-five"),
-      button, led;
+```javascript
+var five = require("johnny-five"),
+    button, led;
 
-    five.Board().on("ready", function() {
+five.Board().on("ready", function() {
 
-      button = new five.Button({
-        pin: "A0",
-        invert: true  // Taster ist active low
-      });
+  button = new five.Button({
+    pin: "A0",
+    invert: true  // Taster ist active low
+  });
  
-      led = new five.Led(13);
+  led = new five.Led(13);
 
-      button.on("up", function(){
-        led.off();
-        console.log("up");
-     });
+  button.on("up", function(){
+    led.off();
+    console.log("up");
+  });
 
-      button.on("hold", function(){
-        console.log("hold");
-     });
+  button.on("hold", function(){
+    console.log("hold");
+  });
 
-      button.on("down", function(){
-        led.on();
-        console.log("down");
-      });
-    });
+  button.on("down", function(){
+    led.on();
+    console.log("down");
+  });
+});
+```
 	
-<a id="troubleshooting"></a>
 ## Fehlersuche
 
 ### Taste funktioniert nicht
@@ -77,12 +77,12 @@ Stelle sicher, dass das Arduino mit dem Computer über USB verbunden ist.
 
 Es kommt vor das Johnny-Five nicht mit dem Arduino über den USB COM Port kommunizieren kann. Stelle sicher, das die Arduino IDE beendet wurde. Wenn das Probelm immer noch besteht, kann man das Programm so ändern, dass Johnny-Five den richtigen USB COM Port verwendet:
 
-    var board = new j5.Board({port:'COM7'});
+```javascript
+var board = new j5.Board({port:'COM7'});
+```
 
-<a id="extending"></a>
 ## Programm erweitern
 
-<a id="more"></a>
 ## Mehr Informationen
 
-http://johnny-five.io/api/button/
+[Johnny-Five Taster Beispiele](http://johnny-five.io/api/button/)

@@ -7,11 +7,12 @@ Es werden neben Bauteile aus der vorhergehenden Übung werden zwei weitere Taste
 
 Wenn alles zusammenbaut ist, kann der Arduino wieder mit dem PC verbunden werden. Danach wird das Programm aus dem `node-ardx-de` Verzeichnis über die folgende Kommadozeile gestarted:
 
-`node code/04-code-3xbutton.js`
+```shell
+node code/04-code-3xbutton.js`
+```
 
 Drücke `Control-D` um das Program zu beenden.
 
-<a id="parts"></a>
 ## Teileliste
 
 * Arduino Micro
@@ -24,33 +25,32 @@ Drücke `Control-D` um das Program zu beenden.
 * 330 Ohm Widerstand (orange-orange-braun)
 * 680 Ohm Widerstand (blau-grau-braun)
 
-<a id="circuit"></a>
 ## Schaltplan und Verdrahtung
 [<img style="max-width:500px" src="../../images/circ/04-LED-3xButton_Steckplatine.png" alt="Verdrahtung"/>]
 
-<a id="code"></a>
 ## Programm
 
-Das Javascript Programm befindet sich unter `code/02-code-led-pwm.js`
+Das Javascript Programm befindet sich unter `code/04-code-3xbutton.js`
 
-    var five = require("johnny-five"),
-      button, led;
+```javascript
+var five = require("johnny-five"),
+    button, led;
 
-    five.Board().on("ready", function() {
+five.Board().on("ready", function() {
 
-      button = new five.Button("A0");
-      led = new five.Led(13);
+  button = new five.Button("A0");
+  led = new five.Led(13);
 
-      button.on("up", function(){
-        led.on();
-      });
+  button.on("up", function(){
+    led.on();
+  });
 
-      button.on("down", function(){
-        led.off();
-      });
-    });
+  button.on("down", function(){
+    led.off();
+  });
+});
+```
 	
-<a id="troubleshooting"></a>
 ## Fehlersuche
 
 ### Taste funktioniert nicht
@@ -70,12 +70,12 @@ Stelle sicher, dass das Arduino mit dem Computer über USB verbunden ist.
 
 Es kommt vor das Johnny-Five nicht mit dem Arduino über den USB COM Port kommunizieren kann. Stelle sicher, das die Arduino IDE beendet wurde. Wenn das Probelm immer noch besteht, kann man das Programm so ändern, dass Johnny-Five den richtigen USB COM Port verwendet:
 
-    var board = new j5.Board({port:'COM7'});
+```javascript
+var board = new j5.Board({port:'COM7'});
+```
 
-<a id="extending"></a>
 ## Programm erweitern
 
-<a id="more"></a>
 ## Mehr Informationen
 
-http://johnny-five.io/api/button/
+[Johnny-Five Taster Beispiele](http://johnny-five.io/api/button/)

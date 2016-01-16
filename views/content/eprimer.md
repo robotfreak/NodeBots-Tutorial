@@ -19,7 +19,7 @@ Looks like a mini light bulb.
 * Requires a current limiting resistor
 
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Leuchtdiode
+[Wikipedia Leuchtdiode](https://de.wikipedia.org/wiki/Leuchtdiode)
 
 ## Diode
 ![Diode](../images/parts/diode.png "Diode")
@@ -32,7 +32,7 @@ Usually a cylinder with wires extending from either end (and an off center line 
 ### Was zu beachten ist:
 Will only work in one direction (current will flow if end with the line is connected to ground)
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Diode
+[Wikipedia Diode](https://de.wikipedia.org/wiki/Diode)
 
 ## Widerstand
 ![Resistor](../images/parts/resistor.png "Resistor")
@@ -49,7 +49,7 @@ Cylinder with wires extending from either end. The value is displayed using a co
 ### Was zu beachten ist:
 Easy to grab the wrong value (double check the colors before using)
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Widerstand
+[Wikipedia Widerstand](https://de.wikipedia.org/wiki/Widerstand)
 
 ## Transistor
 ![Transistor](../images/parts/transistor.png "Transistor")
@@ -62,7 +62,7 @@ Comes in many different packages but you can read the part number off the packag
 ### Things to watch out for:
 Plugging in the right way round (also a current limiting resistor is often needed on the base pin)
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Transistor
+[Wikipedia Transistor](https://de.wikipedia.org/wiki/Transistor)
 
 ## Servo
 ![Servo](../images/parts/servo.png "Servo")
@@ -75,7 +75,7 @@ A plastic box with 3 wires coming out one side and a shaft with a plastic horn o
 ### Was zu beachten ist:
 The plug is not polarized so make sure it is plugged in the right way.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Servo
+[Wikipedia Servo](https://de.wikipedia.org/wiki/Servo)
 
 ## DC Motor 
 ![DC Motor](../images/parts/dc-motor.png "DC Motor")
@@ -88,7 +88,7 @@ Usually a cylinder with a shaft coming out of one end.
 ### Was zu beachten ist:
 Using a transistor or relay that is rated for the size of motor you're using.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Gleichstrommaschine
+[Wikipedia DC-Motor](https://de.wikipedia.org/wiki/Gleichstrommaschine)
 
 ## Piezo Summer
 ![Piezo](../images/parts/piezo.png "Piezo")
@@ -101,7 +101,7 @@ In this kit it comes in a little black barrel, but sometimes they are just a gol
 ### Was zu beachten ist:
 Difficult to misuse.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Summer
+[Wikipedia Summer](https://de.wikipedia.org/wiki/Summer)
 
 ## IC (Integrated Circuit)
 ![IC-74HC595](../images/parts/74HC595.png "IC-74HC595")
@@ -114,7 +114,7 @@ The part ID is written on the outside of the package (this sometimes requires a 
 ### Was zu beachten ist:
 Proper orientation (look for marks showing pin 1)
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Integrierter_Schaltkreis
+[Wikipedia IC](https://de.wikipedia.org/wiki/Integrierter_Schaltkreis)
 
 ## Taster
 ![Button](../images/parts/button.png "Button")
@@ -127,7 +127,7 @@ A little square with leads out the bottom and a button on the top.
 ### Was zu beachten ist:
 These are almost square so can be inserted 90 degrees off angle.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Taste
+[Wikipedia Taste](https://de.wikipedia.org/wiki/Taste)
 
 ## Potentiometer
 ![Potentiometer](../images/parts/poti.png "Potentiometer")
@@ -141,7 +141,7 @@ They can be packaged in many different form factors, look for a dial to identify
 ### Was zu beachten ist:
 Accidentally buying logarithmic scale.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Potentiometer
+[Wikipedia Potentiometer](https://de.wikipedia.org/wiki/Potentiometer)
 
 ## Foto Widerstand
 ![Photo Resistor](../images/parts/photo-resistor.png "Photo Resistor")
@@ -154,7 +154,7 @@ Usually a little disk with a clear top and a curvy line underneath.
 ### Was zu beachten ist:
 Remember it needs to be in a voltage divider before it provides a useful input.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Fotowiderstand
+[Wikipedia Fotowiderstand](https://de.wikipedia.org/wiki/Fotowiderstand)
 
 ## TMP36 Temperatur Sensor
 ![TMP36](../images/parts/tmp36.png "TMP36")
@@ -167,10 +167,8 @@ Usually has TMP36 written on the component.
 ### Was zu beachten ist:
 It looks a bit like the P2N2222AG transistors - check the text printed on the component to make sure you are using the right one.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Temperatursensor
+[Wikipedia Temperatursensor](https://de.wikipedia.org/wiki/Temperatursensor)
 
-<hr/>
-<a id="relay"></a>
 ## Relais
 ![Relay](../images/parts/relais.png "Relay")
 ### Was macht es:
@@ -180,10 +178,8 @@ Depends on the relay. We will use a SPDT relay which has 5.
 ### Identifizierung:
 Looks like a box.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Relais
+[Wikipedia Relais](https://de.wikipedia.org/wiki/Relais)
 
-<hr/>
-<a id="rgbled"></a>
 ## RGB LED
 ![RBG LED](../images/parts/rgb-led.png "RGB LED")
 ### Was macht es:
@@ -196,10 +192,8 @@ Looks like a regular LED, but with extra leads
 There are two common form factors, bulb style (where the common lead is the second lead and is the longest), and Pirahna or UFO form factor (pictured - insert these into the breadboard on the diagonal).
 There are two types of RGB LED, Common Anode and Common Cathode. For Common Anode, connect the common lead to 5V. For Common Cathode, connect the common lead to ground. The three other leads are for R, G and B signal. This guide assumes that you are using a Common Cathode RGB LED.
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Leuchtdiode
+[Wikipedia Leuchtdiode](https://de.wikipedia.org/wiki/Leuchtdiode)
 
-<hr/>
-<a id="breadboard"></a>
 ## Steckbrett
 ![Breadboard](../images/parts/breadboard.png "Breadboard")
 ### Was macht es:
@@ -207,16 +201,14 @@ Used for prototyping circuits
 ### Was zu beachten ist:
 The points in each row are connected horizontally
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Steckplatine
+[Wikipedia Steckplatine](https://de.wikipedia.org/wiki/Steckplatine)
 
 
-<hr/>
-<a id="headerpins"></a>
 ## Stiftleiste
 ![Header Pins](../images/parts/header.png "Header pins")
 ### Was macht es:
 In this kit, header pins are used to secure the circuit sheets to the breadboard and to connect component leads (e.g. on the servo) to the breadboard. Groups of pins can be snapped off to desired length.
 
 ### Mehr Informationen:
-https://de.wikipedia.org/wiki/Stiftleiste
+[Wikipedia Stifleiste](https://de.wikipedia.org/wiki/Stiftleiste)
 
