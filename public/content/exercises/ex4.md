@@ -79,4 +79,4 @@ var board = new j5.Board({port:'COM7'});
 
 ## Mehr Informationen
 
-[Johnny-Five Taster Beispiele](http://johnny-five.io/api/button/)
+* [Johnny-Five Taster Beispiele](http://johnny-five.io/api/button/)

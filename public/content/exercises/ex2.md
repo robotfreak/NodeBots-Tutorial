@@ -62,7 +62,7 @@ Dioden sind gepolte Bauelemente. D.h. sie funktionieren nur in eine Richtung. Ve
 
 Stelle sicher, dass das Arduino mit dem Computer über USB verbunden ist.
 
-### es funktioniert immer nioch nicht
+### es funktioniert immer noch nicht
 
 Es kommt vor das Johnny-Five nicht mit dem Arduino über den USB COM Port kommunizieren kann. Stelle sicher, das die Arduino IDE beendet wurde. Wenn das Probelm immer noch besteht, kann man das Programm so ändern, dass Johnny-Five den richtigen USB COM Port verwendet:
 
@@ -88,5 +88,5 @@ led.fadeOut(500);
 
 ## Mehr Informationen
 
-[Johnny-Five LED Beispiele](http://johnny-five.io/examples/led/)
-[Wikipedia PWM](https://de.wikipedia.org/wiki/Pulsweitenmodulation)
+* [Johnny-Five LED Beispiele](http://johnny-five.io/examples/led/)
+* [Wikipedia PWM](https://de.wikipedia.org/wiki/Pulsweitenmodulation)

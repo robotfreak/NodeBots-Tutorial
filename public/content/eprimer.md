@@ -2,7 +2,7 @@
 Es wird keine Erfahrung mit elektronischen Bauteilen benötigt, um Spaß mit Arduino & Co zu haben. Die wichtigsten Informationen finden sich hier. Für weiterführende Infos empfehle ich das [Mikrocontroller.net](https://www.mikrocontroller.net/articles/Elektronik_Allgemein)
  
 
-Für eine Einführung in Arduino wird ein Besuch der [Arduino Wensite](http://arduino.cc/en/Guide/HomePage) empfohlen.
+Für eine Einführung in Arduino ist ein Besuch der [Arduino Website](http://arduino.cc/en/Guide/HomePage) empfehlenswert.
 
 ## Widerstand
 Ein Widerstand dem Strom einen Widerstand entgegensetzt. Eingesetzt werden Widerstände zur Strombegrenzung (Vorwiderstand bei LEDs) und als Spannungsteiler, um definierte Pegel einstellen (Pullup- und Pulldown-Widerstände).

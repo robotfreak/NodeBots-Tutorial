@@ -58,7 +58,7 @@ Dioden sind gepolte Bauelemente. D.H. sie funktionieren nur in eine Richtung. Ve
 
 Stelle sicher, dass das Arduino mit dem Computer über USB verbunden ist.
 
-### es funktioniert immer nioch nicht
+### es funktioniert immer noch nicht
 
 Es kommt vor das Johnny-Five nicht mit dem Arduino über den USB COM Port kommunizieren kann. Stelle sicher, das die Arduino IDE beendet wurde. Wenn das Probelm immer noch besteht, kann man das Programm so ändern, dass Johnny-Five den richtigen USB COM Port verwendet:
 
@@ -90,7 +90,7 @@ led.strobe(1000);
 Im nächsten Beispiel werden wir lernen, wie man die Helligkeit der LED ändern kann
 
 ## Mehr Informationen
-[Johnny-Five LED Beispiele](http://johnny-five.io/examples/led/)
+* [Johnny-Five LED Beispiele](http://johnny-five.io/examples/led/)
 
 
 
