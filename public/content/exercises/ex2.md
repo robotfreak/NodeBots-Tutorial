@@ -22,7 +22,13 @@ node code/02-code-led-pwm.js`
 
 ## Schaltplan und Verdrahtung
 
+Die Verdrahtung:
+
 ![Verdrahtung](../../images/circ/01-LED_Steckplatine.png "Verdrahtung")
+
+Der Schaltplan:
+
+![Schaltplan](../../images/circ/led-schematic.png "Schaltplan")
 
 ## Programm
 

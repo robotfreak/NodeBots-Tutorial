@@ -24,7 +24,13 @@ Drücke `Control-D` um das Program zu beenden.
 
 ## Schaltplan und Verdrahtung
 
+Die Verdrahtung:
+
 ![Verdrahtung](../../images/circ/03-LED-Button_Steckplatine.png "Verdrahtung")
+
+Der Schaltplan:
+
+![Schaltplan](../../images/circ/button-schematic.png "Schaltplan")
 
 ## Programm
 
