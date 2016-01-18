@@ -21,7 +21,7 @@ node code/01-code-led.js
 * 560 Ohm Widerstand (grün-blau-braun)
 
 ## Schaltplan und Verdrahtung
-[<img style="max-width:500px" src="../../images/circ/01-LED_Steckplatine.png" alt="Verdrahtung"/>]
+![Verdrahtung](../../images/circ/01-LED_Steckplatine.png "Verdrahtung")
 
 ## Programm
 

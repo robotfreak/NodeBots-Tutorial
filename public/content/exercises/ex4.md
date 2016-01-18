@@ -26,7 +26,8 @@ Drücke `Control-D` um das Program zu beenden.
 * 680 Ohm Widerstand (blau-grau-braun)
 
 ## Schaltplan und Verdrahtung
-[<img style="max-width:500px" src="../../images/circ/04-LED-3xButton_Steckplatine.png" alt="Verdrahtung"/>]
+
+![Verdrahtung](../../images/circ/04-LED-3xButton_Steckplatine.png "Verdrahtung")
 
 ## Programm
 

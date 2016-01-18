@@ -23,7 +23,8 @@ Drücke `Control-D` um das Program zu beenden.
 * 2,2 kOhm Widerstand (rot-rot-rot)
 
 ## Schaltplan und Verdrahtung
-[<img style="max-width:500px" src="../../images/circ/03-LED-Button_Steckplatine.png" alt="Verdrahtung"/>]
+
+![Verdrahtung](../../images/circ/03-LED-Button_Steckplatine.png "Verdrahtung")
 
 ## Programm
 
