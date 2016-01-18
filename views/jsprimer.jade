@@ -1,6 +1,15 @@
+include mixins
 extends layout
 
 block content
+  +nav("Arduino Tutorials","dropdown_menu")
+    +nav_item("/") Home
+    +nav_item("/intro/") Einführung in NodeBots
+    +nav_item("/jsprimer/","active") Einführung in JavaScript
+    +nav_item("/eprimer/") Einführung in die Elektronik
+    +nav_item("/iotut/") Ein-Ausgabe Tutorial
+    +nav_item("/sndtut/") Sound Tutorial
+    +nav_item("/robtut1/") Roboter Tutorial
   h1= title
 
   include:markdown-it ../public/content/jsprimer.md

@@ -1,17 +1,26 @@
+include mixins
 extends layout
 
 block content
+  +nav("Arduino Tutorials","dropdown_menu")
+    +nav_item("/") Home
+    +nav_item("/intro/") Einführung in NodeBots
+    +nav_item("/jsprimer/") Einführung in JavaScript
+    +nav_item("/eprimer/") Einführung in die Elektronik
+    +nav_item("/iotut/","active") Ein-Ausgabe Tutorial
+    +nav_item("/sndtut/") Sound Tutorial
+    +nav_item("/robtut1/") Roboter Tutorial
   h1= title
 
   h2 01 Hallo Arduino
   include:markdown-it ../public/content/exercises/ex1.md
-  <hl>
+  <hr>
   h2 02 LED Blink mit PWM
   include:markdown-it ../public/content/exercises/ex2.md
-  <hl>
+  <hr>
   h2 03 Taster und LED
   include:markdown-it ../public/content/exercises/ex3.md
-  <hl>
+  <hr>
   h2 04 3 Taster an einem Pin
   include:markdown-it ../public/content/exercises/ex4.md
   t.b.c

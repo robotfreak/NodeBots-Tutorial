@@ -1,6 +1,15 @@
+include mixins
 extends layout
 
 block content
+  +nav("Arduino Tutorials","dropdown_menu")
+    +nav_item("/","active") Home
+    +nav_item("/intro/") Einführung in NodeBots
+    +nav_item("/jsprimer/") Einführung in JavaScript
+    +nav_item("/eprimer/") Einführung in die Elektronik
+    +nav_item("/iotut/") Ein-Ausgabe Tutorial
+    +nav_item("/sndtut/") Sound Tutorial
+    +nav_item("/robtut1/") Roboter Tutorial
   h1= title
 
   h2 Einführung
@@ -9,8 +18,7 @@ block content
   li <a href = "/eprimer/"> Einführung in die Elektronik</a> 
 
   h2 Tutorials
-  li <a href = "/iotut/"> Ein-Ausgabe mit Arduino</a> 
-  li <a href = "/sndtut/"> Sound mit Arduino</a> 
-  li <a href = "/robtut1/"> Roboter Tutorial 1</a> 
-  li <a href = "/robtut2/"> Roboter Tutorial 2</a> 
-
+  li <a href = "/iotut/"> Ein-Ausgabe Tutorial</a> 
+  li <a href = "/sndtut/"> Sound Tutorial</a> 
+  li <a href = "/robtut1/"> Roboter Tutorial</a> 
+  
