@@ -19,7 +19,7 @@ Drücke `Control-D` um das Program zu beenden.
 * Drahtbrücken Set
 * 5mm LED 
 * Taster 10x10mm
-* 560 Ohm Widerstand (grün-blau-braun)
+* 680 Ohm Widerstand (blau-grau-braun)
 * 2,2 kOhm Widerstand (rot-rot-rot)
 
 ## Schaltplan und Verdrahtung
@@ -30,6 +30,7 @@ Die Verdrahtung:
 
 Der Schaltplan:
 
+![Schaltplan](../../images/circ/led-schematic.png "Schaltplan")
 ![Schaltplan](../../images/circ/button-schematic.png "Schaltplan")
 
 ## Programm

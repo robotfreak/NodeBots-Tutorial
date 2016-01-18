@@ -18,7 +18,7 @@ node code/02-code-led-pwm.js`
 * Steckplatine
 * Drahtbrücken Set
 * 5mm LED 
-* 560 Ohm Widerstand (grün-blau-braun)
+* 680 Ohm Widerstand (blau-grau-braun)
 
 ## Schaltplan und Verdrahtung
 

@@ -20,10 +20,9 @@ Drücke `Control-D` um das Program zu beenden.
 * Drahtbrücken Set
 * 5mm LED 
 * 3x Taster 10x10mm
-* 560 Ohm Widerstand (grün-blau-braun)
 * 2,2 kOhm Widerstand (rot-rot-rot)
 * 330 Ohm Widerstand (orange-orange-braun)
-* 680 Ohm Widerstand (blau-grau-braun)
+* 2 x 680 Ohm Widerstand (blau-grau-braun)
 
 ## Schaltplan und Verdrahtung
 
@@ -33,6 +32,7 @@ Die Verdrahtung:
 
 Der Schaltplan:
 
+![Schaltplan](../../images/circ/led-schematic.png "Schaltplan")
 ![Schaltplan](../../images/circ/3xbutton-schematic.png "Schaltplan")
 
 ## Programm
@@ -40,13 +40,12 @@ Der Schaltplan:
 Das Javascript Programm befindet sich unter `code/04-code-3xbutton.js`
 
 ```javascript
-var five = require("johnny-five"),
-    button, led;
+var five = require("johnny-five");
 
 five.Board().on("ready", function() {
 
-  button = new five.Button("A0");
-  led = new five.Led(13);
+  var button = new five.Button("A0");
+  var led = new five.Led(13);
 
   button.on("up", function(){
     led.on();
