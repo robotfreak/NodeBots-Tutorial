@@ -1,8 +1,8 @@
-include mixins
-extends layout
+//include mixins
+extends _bootstrap
 
-block content
-  +nav("Arduino Tutorials","dropdown_menu")
+block body
+  +navbar("Arduino Tutorials","dropdown_menu")
     +nav_item("/","active") Home
     +nav_item("/intro/") Einführung in NodeBots
     +nav_item("/jsprimer/") Einführung in JavaScript
@@ -10,15 +10,32 @@ block content
     +nav_item("/iotut/") Ein-Ausgabe Tutorial
     +nav_item("/sndtut/") Sound Tutorial
     +nav_item("/robtut1/") Roboter Tutorial
-  h1= title
 
-  h2 Einführung
-  li <a href = "/intro/"> Einführung in NodeBots</a> 
-  li <a href = "/jsprimer/"> Einführung in JavaScript</a> 
-  li <a href = "/eprimer/"> Einführung in die Elektronik</a> 
+  div(class="container")  
+    div(class="jumbotron")
+      h1= title
+ 
+    +carousel("Carousel ID_2",[
+      {image:"images/slide1.png"},
+      {image:"images/slide2.png"},
+      {image:"images/slide3.png"},
+      {image:"images/slide4.png"}
+    ])
 
-  h2 Tutorials
-  li <a href = "/iotut/"> Ein-Ausgabe Tutorial</a> 
-  li <a href = "/sndtut/"> Sound Tutorial</a> 
-  li <a href = "/robtut1/"> Roboter Tutorial</a> 
+ 
+  div(class="container")  
+    div(class="jumbotron")
+      h2 Einführung
+  
+    div(class="alert alert-success") <a href = "/intro/"> Einführung in NodeBots</a> 
+    div(class="alert alert-success") <a href = "/jsprimer/"> Einführung in JavaScript</a> 
+    div(class="alert alert-success") <a href = "/eprimer/"> Einführung in die Elektronik</a> 
+
+  div(class="container")  
+    div(class="jumbotron")
+      h2 Tutorials
+  
+    div(class="alert alert-info") <a href = "/iotut/"> Ein-Ausgabe Tutorial</a> 
+    div(class="alert alert-info") <a href = "/sndtut/"> Sound Tutorial</a> 
+    div(class="alert alert-info") <a href = "/robtut1/"> Roboter Tutorial</a> 
   

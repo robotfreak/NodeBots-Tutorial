@@ -1,8 +1,7 @@
-include mixins
-extends layout
+extends _bootstrap
 
-block content
-  +nav("Arduino Tutorials","dropdown_menu")
+block body
+  +navbar("Arduino Tutorials","dropdown_menu")
     +nav_item("/") Home
     +nav_item("/intro/") Einführung in NodeBots
     +nav_item("/jsprimer/","active") Einführung in JavaScript
@@ -10,6 +9,9 @@ block content
     +nav_item("/iotut/") Ein-Ausgabe Tutorial
     +nav_item("/sndtut/") Sound Tutorial
     +nav_item("/robtut1/") Roboter Tutorial
-  h1= title
 
-  include:markdown-it ../public/content/jsprimer.md
+  div(class="container")  
+    div(class="jumbotron")
+      h1= title
+
+    include:markdown-it ../public/content/jsprimer.md
