@@ -26,9 +26,7 @@ Start des Express Web-Servers aus dem Installations Verzeichnis:
 npm start
 ```
 
-Der Web-Server ist auf der lokalen Maschine unter der Portnummer 3000 zu erreichen.
-
-Im Browser ist der Web-Server unter folgender Adresse zu errichen:
+Der Web-Server ist dann im Browser unter folgender Adresse zu erreichen:
 
 ```
 127.0.0.1:3000
