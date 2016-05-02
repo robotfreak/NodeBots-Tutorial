@@ -28,8 +28,13 @@ npm start
 
 Der Web-Server ist auf der lokalen Maschine unter der Portnummer 3000 zu erreichen.
 
-Zum Start des Tutorials ist im Browser folgende Adresse einzugeben:
+Im Browser ist der Web-Server unter folgender Adresse zu errichen:
 
 ```
 127.0.0.1:3000
+```
+oder
+
+```
+http://localhost:3000/
 ```
