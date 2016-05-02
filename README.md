@@ -5,27 +5,28 @@ Dieses Tutorial ist noch im Entstehen. Benutzung auf eigene Gefahr!
 
 ## 
 
-Es wird node.js benötigt v4.4.3 LTS ist ausreichend.
+Es wird node.js benötigt (v4.4.3 LTS ist ausreichend).
 
 https://nodejs.org/en/
 
 
 ## Installation
 
-nach dem Download und auspacken des Archives die notwendigen node module installierewn mit:
+Nach dem Download und auspacken des Archives die notwendigen Node Module aus dem Installations Verzeichnis installieren:
+
 ```
 npm install
 ```
 
 ## Ausführen
 
-Start des express Servers mit:
+Start des Express Web-Servers aus dem Installations Verzeichnis:
 
 ```
 npm start
 ```
 
-Es wird ein Web-Server auf der lokalen Maschine und der Portnummer 3000 gestartet 
+Der Web-Server ist auf der lokalen Maschine unter der Portnummer 3000 zu erreichen.
 
 Zum Start des Tutorials ist im Browser folgende Adresse einzugeben:
 
