@@ -3,15 +3,15 @@ extends _bootstrap
 block body
   +navbar("NodeBots Tutorial","dropdown_menu")
     +nav_item("/") Home
-    +nav_item("/intro/","active") Einführung in NodeBots
+    +nav_item("/intro/") Einführung in NodeBots
     +nav_item("/jsprimer/") Einführung in JavaScript
     +nav_item("/eprimer/") Einführung in die Elektronik
     +nav_item("/displays/") Roboter Anzeigen
     +nav_item("/sensors/") Roboter Sensoren
-    +nav_item("/actors/") Roboter Antriebe
+    +nav_item("/actors/","active") Roboter Antriebe
 
   div(class="container")  
     div(class="jumbotron alert-success")
       h1= title
 
-    include:markdown-it ../public/content/introduction.md
+    include:markdown-it ../public/content/actors.md

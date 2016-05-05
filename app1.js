@@ -9,9 +9,10 @@ var routes = require('./routes/index');
 var intro = require('./routes/intro');
 var jsprimer = require('./routes/jsprimer');
 var eprimer = require('./routes/eprimer');
-var displays = require('./routes/displays');
-var sensors = require('./routes/sensors');
-var actors = require('./routes/actors');
+var iotut = require('./routes/iotut');
+var sndtut = require('./routes/sndtut');
+var robtut1 = require('./routes/robtut1');
+var robtut2 = require('./routes/robtut2');
 
 var app = express();
 
@@ -31,9 +32,10 @@ app.use('/', routes);
 app.use('/intro', intro);
 app.use('/eprimer', eprimer);
 app.use('/jsprimer', jsprimer); 
-app.use('/displays', displays); 
-app.use('/sensors', sensors); 
-app.use('/actors', actors); 
+app.use('/iotut', iotut); 
+app.use('/sndtut', sndtut); 
+app.use('/robtut1', robtut1); 
+app.use('/robtut2', robtut2); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
