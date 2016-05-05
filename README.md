@@ -1,4 +1,4 @@
-# node-arduino-tuts
+# NodeBots Tutorial 
 NodeBots Tutorial mit Arduino, node.js und johnny-five
 
 ![Screenshot](public/images/web-server-screenshot.jpg "Screenshot")
