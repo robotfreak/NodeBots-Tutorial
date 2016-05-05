@@ -129,49 +129,147 @@ board.on("ready", function() {
 });
 ```
 
-
-
 ### Übungen
 
 Du kannst die LED-Matrix  auch über das Terminal Fenster steuern. 
 
 Probiere die Funktion `draw` mit verschiedenen Buchstaben, Zahlen und Sonderzeichen aus (z.B. `draw("$").für das Dollar-Zeichen. Es gibt aiuch einige Emojis, wie z.B. `draw("smile")` oder `draw("angryface")` 
 
-## 7-Segment LED Anzeige
+## 7-Segment Anzeige
 
-Eine Sonderform der LED Matrix ist die 7-Segment Anzeige. Mit den 7 LEDs können die Ziffern 0..9 und auch einige Buchstaben dargestellt werden. Das ist eine  feine Sache um z.B. den Wert eines Sensors oder einfach die aktuelle Uhrzeit anzuzeigen. Die Ansteuerung erfolgt identisch zur LED Matrix über I2C
+Eine Sonderform der LED-Matrix ist die 7-Segment Anzeige. Mit den 7 LEDs können die Ziffern 0..9 und auch einige Buchstaben dargestellt werden. Das ist einefeine Sache um z.B. den Wert eines Sensors oder einfach die aktuelle Uhrzeit anzuzeigen. Die Ansteuerung erfolgt identisch zur LED Matrix über I2C.
+
+![7-Segment Display](../images/parts/7-segment-display.png "7-Segment Displa")
+
 
 ### Schaltung
 
+![Verdrahtung](../images/circ/7-Segment-LED_Steckplatine.png "Verdrahtung")
+
+![Schaltplan](../images/circ/7-Segment-LED_Schaltplan.png "Schaltplan")
+
 ### Programm
 
-### Übungen
+```javascript
+var moment = require("moment");
+var five = require("johnny-five");
+var board = new five.Board({
+});
+
+board.on("ready", function() {
+  var digits = new five.Led.Digits({
+    controller: "HT16K33",
+  });
+  var toggle = 0;
+
+  setInterval(function() {
+    // Toggle the colon part: on for a second, off for a second.
+    digits.print(time(toggle ^= 1));
+  }, 1000);
+});
+
+function time(showColon) {
+  var display = "    " + moment().format(
+    showColon ? "h:mm" : "h mm"
+  );
+  return display.slice(-5);
+}
+
+```
 
 ## Mehrere LED Matrizen
 
-Es können auch mehrere LED Matrizen über einen I2C Bus angesteuert werden. Dazu gibt es für jede Anzeige eine 2-3 stellige Adresse, die über Setzern von Lötbrücken geändert werden kann. Natürlich muss dann jede Anzeige eine eigene individuelle Adresse bekommen. So läßt sich z.B. aus 4 LED Matrizen ein Gesicht besteht aus zwei Augen (2 LED Matrizen) und einem Mund (ebenfalls 2 LED Matrizen). Damit ergeben sich noch mehr Anzeige Möglichkeiten und der Roboter erhält ein Gesicht um z.B. Gemütszustände anzuzeigen.
+Es lassen sich über den I2C Bus auch mehrere LED Matrizen ansteuern. Dazu besitzt jede Anzeige eine 2-3 stellige Adresse, die über Lötbrücken geändert werden kann. Natürlich muss dann jede Anzeige eine eigene individuelle Adresse bekommen. So läßt sich z.B. aus 4 LED Matrizen ein Gesicht, bestehend aus zwei Augen (2 LED Matrizen) und einem Mund (ebenfalls 2 LED Matrizen) bilden. Damit ergeben sich noch mehr Anzeige Möglichkeiten und der Roboter erhält ein Gesicht um z.B. Gemütszustände anzuzeigen.
 
 
 ### Schaltung
 
+![Verdrahtung](../images/circ/4xLED-Matrix_Steckplatine.png "Verdrahtung")
+
 ### Programm
+
+```javascript
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  var grumpyLt = [
+    "00000000",
+    "00000000",
+    "00000011",
+    "00000111",
+    "00001100",
+    "00011000",
+    "00011000",
+    "00011000"
+  ];
+
+  var grumpyRt = [
+    "00000000",
+    "00000000",
+    "11000000",
+    "11100000",
+    "00110000",
+    "00011000",
+    "00011000",
+    "00011000"
+  ];
+
+  var grumpyEye = [
+    "00011000",
+    "01100110",
+    "01100110",
+    "11111111",
+    "11111111",
+    "01111110",
+    "01111110",
+    "00011000"
+  ];
+
+  var eyes = new five.Led.Matrix({
+    addresses: [0x70, 0x71],
+    controller: "HT16K33",
+  });
+
+  var mouthLt = new five.Led.Matrix({
+    addresses: [0x72],
+    controller: "HT16K33",
+  });
+
+  var mouthRt = new five.Led.Matrix({
+    addresses: [0x73],
+    controller: "HT16K33",
+  });
+
+  eyes.clear();
+  mouthLt.clear();
+  mouthRt.clear();
+  eyes.draw(grumpyEye);
+  mouthLt.draw(grumpyLt);
+  mouthRt.draw(grumpyRt);
+
+  // type `draw("shape_name")` into the repl to see the shape!  
+  this.repl.inject({
+    eyes: function(shape) {
+      eyes.draw(five.Led.Matrix.CHARS[shape]);
+    }
+  });
+  this.repl.inject({
+    mouth: function(shape) {
+      mouthLt.draw(five.Led.Matrix.CHARS[shape]);
+      mouthRt.draw(five.Led.Matrix.CHARS[shape]);
+    }
+  });
+  
+});
+```
 
 ### Übungen
 
 
-## Servos
+## Weiterführende Themen
 
-Leider ist der Roboter Kopf noch etwas starr. es wäre schön, wenn er seinen Kopf auch bewegen könnte. Dafür gibt es sogennante Servos.  Ein Servo ist ein kleiner Getriebemotor mit eingebauter Elektronik. Im Gegensatz zu einem Getriebemotor dreht sich der Servo nicht kontinuierlich, sondern nur innerhalb eines bestimmten Winkels (180°). Der gewünschte Winkel wird dem Servo vom Mikrocontroller über den Servo Steuer Pin  mitgeteilt. Ein Impuls mit einer bestimmten Länge (zwischen 1..2ms)  wird vom Servo in den entsprechenden Winkel von 0..180° umgesetzt.
-
-Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen (zwischen rechts und links sowie oben und unten) . Man spricht hier auch von Freiheitsgraden. 
-
-### Schaltung
-
-### Programm
-
-### Übungen
-
-## Sensoren
-
-Alles zusammen genommen ergibt sich mit den LED Matrizen und den Servo schon ein recht lebendiges Geschöpf, auch wenn der Roboter nach wie vor nur vorprogrammierte Bewegungen durchführen kann. Um auf  Ereignisse von außen mit bestimmten Verhaltensweisen reagieren zu können fehlen dem Roboter noch die nötigen Sinne, sprich die Sensoren, um seine Umwelt wahrzunehmen. Näheres dazu lernt man im Kapitel über Roboter Sensoren. 
+Leider ist der Roboter Kopf noch etwas starr. es wäre schön, wenn er auch seinen Kopf auch bewegen könnte. Damit kann der Kopf des Roboters vorprogrammierte Bewegungen durchführen. Servos lernen wir im Tutorial über Roboter Antriebe kennen. 
+Damit der Roboter auch auf Ereignisse von außen mit bestimmten Verhaltensweisen reagieren kann, fehlen dem Roboter noch die nötigen Sinne, sprich die Sensoren, um seine Umwelt wahrzunehmen. Näheres dazu lernt man im Kapitel über Roboter Sensoren. 
 
