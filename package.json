@@ -1,6 +1,6 @@
 {
-  "name": "node-arduino-tuts",
-  "version": "0.0.0",
+  "name": "NodeBots-Tutorial",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -14,6 +14,12 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
     "jstransformer-markdown-it": "~0.2.2",
-    "jade-bootstrap": "~1.0.1"
-  }
+    "jade-bootstrap": "~1.0.1",
+    "johnny-five": "0.9.x"
+  },
+  "keywords": [
+    "arduino",
+    "johnny-five",
+    "nodebots"
+  ]
 }

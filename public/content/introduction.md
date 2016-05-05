@@ -1,20 +1,35 @@
 ## Über dieses Tutorial
 
-NodeBots sind Arduino-basierte Roboter, die über [node.js](http://nodejs.org/) gesteuert werden. 
+NodeBots sind Roboter, die mit JavaScript programmiert werden.  Die Basis für NodeBots bilden [node.js](http://nodejs.org/) und die [Johnny-Five.js](http://johnny-five.io/) Bibliothek von Rick Walden.
+
+![NodeBots](../images/nodebots.png "NodeBots")
+ 
+`JavaScript + Hardware = Roboter`
+
+Das ist die einfache Formel für das [NodeBots](http://nodebots.io/) Prinzip.
 
 Dieses Tutorial führt Schritt für Schritt durch den Zusammenbau und die Programmierung einer Reihe von Projekten mit Arduino-kompatibler Hardware mit `node.js`. Vornehmlich wird der Arduino Mocro verwendet. Es geht aber auch mit anderen Arduino Boards wie dem Uno, Mini Mega o.ä. 
 
 Das Ziel des Tutorials ist der Spaß an der Sache. Nebenbei lernt man eine Menge über Elektronik, elektronische Schaltungen und natürlich die Programmierung mit `node.js`. Besondere Vorkenntnisse sind nicht notwendig.
  
+### Woraus besteht ein NodeBot?
+
+NodeBots lassen sich sehr günstig selbst herstellen. Die einfachste Variante besteht aus Pappe, 2 Servos mit Endlosantrieb und einem Arduino Board. 
+
+Da JavaScript nicht auf dem Arduino läuft, ist für die Steuerung ein PC notwendig auf dem Linux, MacOS oder Windows läuft (auch ein Raspberry Pi ist dafür geeignet). Auf dem Arduino selbst, läuft nur das [Firmata](http://www.firmata.org/wiki/Main_Page) Script.
+
+
+Für einen mobilen autonomen Roboter ist es notwendig, das entweder der PC (Raspberry Pi) mit auf dem Roboter sitzt, oder der Roboter über eine drahtlose serielle Schnittstelle (Bluetooth) verfügt. Wenn man einen Rapsberry Pi verwendet, kann man auch auf das Arduino Board verzichten und direkt die GPIO des Raspberry Pi zum Ansteuern der Hardware verwenden . Dazu wird die Bibliothek [Raspi-IO](https://github.com/nebrius/raspi-io/) benötigt.
+
 ### Installation
 
-Das Tutorial kann auf dem eigenen Computer installiert und offline ausgeführt werden. Dazu wird `node.js` benötigt.
+Das Tutorial kann auf dem eigenen Computer installiert und offline ausgeführt werden. Dazu wird [Node.js](https://nodejs.org/) benötigt. Zunächst installiert man nur das aktuelle Node.js für sein OS. Weitere benötigte Bibliotheken können über den Node Paket Manager npm installiert werden.
 
 Um das Tutorial zu installieren, öffne die `Node.js command prompt` und gib folgende Kommandos ein:
 
 ```shell
-git clone https://github.com/RobotFreak/node-arduino-tuts.git
-cd node-arduino-tuts
+git clone https://github.com/RobotFreak/NodeBots-Tutorial.git
+cd NodeBots-Tutorial
 npm install
 ```
 
@@ -24,7 +39,7 @@ Starte die Anwendung aus dem `arduino-tuts` Vereichnis, mit:
 npm start
 ```
 
-Öffne die URL [http://localhost:3000](http://localhost:3000) im Web Browser um die Tutorials anzuzeigen.
+Öffne die URL [http://localhost:3000](http://localhost:3000) im Web Browser um das Tutorial zu starten.
 
 ## Open Source Hardware
 

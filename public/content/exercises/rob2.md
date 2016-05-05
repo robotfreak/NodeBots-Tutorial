@@ -24,7 +24,7 @@ node code/servo-remote.js
 
 Der Verdrahtungsplan: 
 
-![Verdrahtung](../../images/circ/servo_Steckplatine.png "Verdrahtung")
+![Verdrahtung](../../images/circ/servo-pan-tilt_Steckplatine.png "Verdrahtung")
 
 ## Programm
 
