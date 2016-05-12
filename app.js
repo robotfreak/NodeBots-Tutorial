@@ -1,4 +1,5 @@
 var express = require('express');
+var mds = require('markdown-serve');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -27,13 +28,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/intro', intro);
-app.use('/eprimer', eprimer);
-app.use('/jsprimer', jsprimer); 
-app.use('/displays', displays); 
-app.use('/sensors', sensors); 
-app.use('/actors', actors); 
+app.use('/json', mds.middleware({
+    rootDirectory: path.resolve(__dirname, 'public/content'),
+}));
+
+app.use(mds.middleware({ 
+    rootDirectory: path.resolve(__dirname, 'public/content'),
+    view: 'markdown'
+}));
+
+//app.use('/', routes);
+//app.use('/intro', intro);
+//app.use('/eprimer', eprimer);
+//app.use('/jsprimer', jsprimer); 
+//app.use('/displays', displays); 
+//app.use('/sensors', sensors); 
+//app.use('/actors', actors); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
