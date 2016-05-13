@@ -1,3 +1,5 @@
+# Potentiometer
+
 In dieser Übung lernen wir ein neues Bauteil kenne. Das Potentiometer, ein Widerstand mit variablem Mittelabgriff. Je nach Stellung des Potentiometers wird die Helligkeit der LED gesteuert (links volle Helligkeit, rechts aus).
 
 Es werden die selben Bauteile benötigt wie im ersten Beispiel. Zusätzlich kommt noch das Potentiometer dazu. Es wird ein PWM-fähiger Pin benötigt. Beim Arduino Micro ist im Gegensatz zum Arduino Uno auch Pin 13 PWM fähig, ebenso wie Pin 11, 10, 9, 6, 5 und 3. 

@@ -1,3 +1,5 @@
+# Taster 
+
 In dieser Übung lernen wie ein Eingabe Element kennen, den Taster. In der folgenden Übung wird der Zusatnd eines Tasters abgefragt und der Zustand über die LED und die Konsole angezeigt.
 
 Es werden neben Bauteile aus den beiden vorhergehenden Übungen ein Taster und ein Pull Up Widerstand benötigt. Der Taster wird am Analog Eingang A0 angeschlossen, die LED wie vorher auch an Pin 13. 

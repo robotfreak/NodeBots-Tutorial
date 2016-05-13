@@ -1,3 +1,5 @@
+# LED weitere Funktionen
+
 In dieser Übung lernen wie ein paar weitere Funktionen um eine LED anzusteuern.
 
 Es werden die selben Bauteile benötigt wie im vorangegangenen Beispiel. Auch der Aufbau identisch. Es wird lediglich ein PWM-fähiger Pin benötigt. Beim Arduino Micro ist im Gegensatz zum Arduino Uno auch Pin 13 PWM fähig, ebenso wie Pin 11, 10, 9, 6, 5 und 3. 
