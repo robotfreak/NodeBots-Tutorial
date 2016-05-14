@@ -4,7 +4,7 @@ Nimmt man statt einem Servo gleich zwei gewinnt man einen Freiheitsgrad mehr. Nu
 
 ### Schaltung
 
-Konnte man bei einem einzelnen Servo vieleicht noch auf eine externe Stromversorgung verzichten, ist das bei zwei und mehr Servos unbedingt zu emfehlen. Auch ein Servo kann recht viel Strom zeihen, insbesondere unter Last.
+Konnte man bei einem einzelnen Servo vieleicht noch auf eine externe Stromversorgung verzichten, ist das bei zwei und mehr Servos unbedingt zu empfehlen. Auch ein Servo kann recht viel Strom ziehen, insbesondere unter Last.
 
 ![Verdrahtung](../../images/circ/servo-pan-tilt_Steckplatine.png "Verdrahtung")
 
@@ -71,4 +71,4 @@ board.on('ready', function () {
 ```
 ### Übungen
 
-Mit den Cursor Tasten kann der Roboterkopf geschwenkt und genit werden. Im Gegensatz zu den bisherigen Kommandos werden hier die Tastendrücke der Tastatur direkt ausgewertet.
+Mit den Cursor Tasten kann der Roboterkopf geschwenkt (Pfeiltasten links, rechts) und geneigt (Pfeiltasten hoch, runter) werden. Im Gegensatz zu den bisherigen Kommandos werden hier die Tastendrücke der Tastatur direkt ausgewertet.
