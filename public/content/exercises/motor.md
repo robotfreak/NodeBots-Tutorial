@@ -80,5 +80,5 @@ Mit dem Kommando ``motor.start()`` wird der Motor gestartet und schaltet ´sich 
 
 ### Wie geht es weiter?
 
-Leider dreht der Motor nur in eine Richtung. Es fehlt die Möglichkeit zum Umpolung der Motorspannung. Hierzu ist ein richtiger Motor Treiber notwendig. Mit nur einem Motor kann der Roboter zwar fahren, aber wie steuert er nach rechts oder links? Näheres erfahrt ihr im nächsten Kapitel [Zwei Motoren](dual-motor) 
+Leider dreht der Motor nur in eine Richtung. Es fehlt die Möglichkeit zum Umpolung der Motorspannung. Hierzu ist ein richtiger Motor Treiber notwendig. Mit nur einem Motor kann der Roboter zwar fahren, aber wie steuert er nach rechts oder links? Näheres erfahrt ihr im nächsten Kapitel [Zwei Motoren](../exercises/dual-motor) 
 
