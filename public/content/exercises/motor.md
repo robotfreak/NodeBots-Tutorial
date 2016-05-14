@@ -10,7 +10,9 @@ Die Motorwelle selbst reicht natürlich nicht um den Motor zu bewegen. Es muss a
 
 ### Schaltung
 
-Da der Motor zu viel Strom zieht um ihn direkt an einen Pin des Mikrocontroller zu schalten, muss noch ein Treiber zwischen Motor und Mikrocontroller geschaltet werden. Im einfachsten Fall genügt ein Transistor. 
+Da der Motor zu viel Strom zieht um ihn direkt an einen Pin des Mikrocontroller zu schalten, muss noch ein Treiber zwischen Motor und Mikrocontroller geschaltet werden. Im einfachsten Fall genügt ein [Transistor](../../parts/transistor). 
+
+Da es sich bei einem Motor um eine induktive Lat handelt, ist auch eine [Schutzdiode](../../parts/diode) (in Sperrrichtung, parallel zum Motor geschaltet) obligatorisch. Der Grund: beim Abschalten des Motors, stoppt dieser nicht sofort, sondern dreht sich noch etwas weiter. Dabei wird der Motor zum Generator und indiziert eine Spannung. Diese Spannung wird über die Diode abgeleitet und verhindert die Zerstörung des Transistors.
 
 ![Verdrahtung](../../images/circ/motor-driver_Steckplatine.png "Verdrahtung")
 
