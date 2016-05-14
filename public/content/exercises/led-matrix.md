@@ -2,13 +2,13 @@
 
 Eine LED Matrix besteht aus mehreren LEDs die üblicherweise in Form einer Matrix von z.B. 8x8 LEDs angeordnet sind. Damit lassen sich gegenüber einer einzelnen LED noch mehr Informationen darstellen. Neben Zahlen und Buchstaben sind damit auch kleine Grafiken wie Emojis möglich. Allerdings ist es nicht ohne weiteres möglich, die 8x8 (64)  LEDs direkt  mit einem Mikrocontroller wie dem Arduino anzusteuern. Zum einen wegen der Stromaufnahme zum anderen wegen der schieren Anzahl von Anschluss Pins die dazu notwendig wären. Deshalb verfügen  LED-Matrizen über Schieberegister oder Port Erweiterungen um Anschluss Pins zu sparen. Die Adafruit LED Matrix 8x8 verfügen über ein I2C interface. Dafür werden nur 2 Pins benötigt. Mehrere Matrizen lassen sich parallel betreiben, da I2C ein serieller Bus ist.
 
-![LED-Matrix](../images/parts/led-matrix8x8.png "LED-Matrix")
+![LED-Matrix](../../images/parts/led-matrix8x8.png "LED-Matrix")
 
 Für eine 8x8 Matrix werden insgesamt 64 Informationen benötigt, ob die entsprechend eLED an oder ausgeschaltet werden soll. Das sind 8 Bytes, je darzustellendes Zeichen Je 8 Bits pro Zeile bei insgesamt 8 Zeilen. Eigene Zeichen lassen sich recht einfach selbst erzeugen, wenn man im Programm die Binär Schreibweise für die 8 Zeilen wählt.
 
 So sieht z.B. die Darstellung auf der LED-Matrix für einen Smiley aus:`
 
-![Smiley](../images/led-matrix-smile.png "Smiley")
+![Smiley](../../images/led-matrix-smile.png "Smiley")
 
 
 Und so der entsprechende Abschnitt im Programm:
@@ -28,9 +28,9 @@ Und so der entsprechende Abschnitt im Programm:
 
 ### Schaltung
 
-![Verdrahtung](../images/circ/LED-Matrix_Steckplatine.png "Verdrahtung")
+![Verdrahtung](../../images/circ/LED-Matrix_Steckplatine.png "Verdrahtung")
 
-![Schaltplan](../images/circ/LED-Matrix_Schaltplan.png "Schaltplan")
+![Schaltplan](../../images/circ/LED-Matrix_Schaltplan.png "Schaltplan")
 
 ### Programm
 
