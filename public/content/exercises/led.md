@@ -2,15 +2,15 @@
 
 Eine LED ist wohl die einfachste Form der Anzeige. Sie kann z.B. als Status Anzeige dienen. 
 
-![LED](../images/parts/LED.png "LED")
+![LED](../../images/parts/LED.png "LED")
 
 ### Schaltung
 
 Zum Betrieb einer LED ist immer ein Widerstand notwendig, der in Reihe zur LED geschaltet wird.
 
-![Verdrahtung](../images/circ/01-LED_Steckplatine.png "Verdrahtung")
+![Verdrahtung](../../images/circ/01-LED_Steckplatine.png "Verdrahtung")
 
-![Schaltplan](../images/circ/led-schematic.png "Schaltplan")
+![Schaltplan](../../images/circ/led-schematic.png "Schaltplan")
 
 ### Programm
 
