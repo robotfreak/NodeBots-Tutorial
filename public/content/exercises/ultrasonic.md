@@ -4,7 +4,7 @@ Ultraschall Sensoren funktionieren nach dem Prinzip der [Echoortung](https://de.
 
 Ultraschall Sensoren gibt es mit verschiedenen Anschluss Möglichketiten. Die meisten Sensoren benötigen ein oder zwei digital Pins zur Ansteuerung, wie der Parallax Ping, Devantech SR-04 SR-05 oder der preiswerte China Klon HC-SR04. Dabei wird ein Trigger Signal ausgegeben und die Pulslänge über den Echo Eingang gelesen. Leider wird  das Messen von Pulslängen ( pulseIn() Funktion) über das Standard Firmata Sketch nicht unterstützt. Es gibt allerdings eine angepasste [Firmata Version](http://johnny-five.io/api/proximity/#pingfirmata), auf die ich aber an dieser Stelle nicht weiter eingehen möchte.
 
-Deshalb kommt hier ein Sensor mit analoger Ansteuerung zum Einsatz, der Maxbotix EZ1 (MB1010). Der Sensor kann Objekte im Bereich 15..645cm erkennen.
+Deshalb kommt hier ein Sensor mit analoger Ansteuerung zum Einsatz, der Maxbotix EZ0 (MB1000). Der Sensor kann Objekte im Bereich 15..645cm erkennen.
 
 ![Ultraschall-Sensor](../../images/parts/ultraschall.png "Ultraschall-Sensor")
 
@@ -22,7 +22,7 @@ var board = new five.Board();
 
 board.on("ready", function() {
   var proximity = new five.Proximity({
-    controller: "MB1010",
+    controller: "MB1000",
     pin: "A4"
   });
 
