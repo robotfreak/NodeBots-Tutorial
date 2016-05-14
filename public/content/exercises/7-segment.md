@@ -2,14 +2,14 @@
 
 Eine Sonderform der LED-Matrix ist die 7-Segment Anzeige. Mit den 7 LEDs können die Ziffern 0..9 und auch einige Buchstaben dargestellt werden. Das ist einefeine Sache um z.B. den Wert eines Sensors oder einfach die aktuelle Uhrzeit anzuzeigen. Die Ansteuerung erfolgt identisch zur LED Matrix über I2C.
 
-![7-Segment Display](../images/parts/7-segment-display.png "7-Segment Displa")
+![7-Segment Display](../../images/parts/7-segment-display.png "7-Segment Displa")
 
 
 ### Schaltung
 
-![Verdrahtung](../images/circ/7-Segment-LED_Steckplatine.png "Verdrahtung")
+![Verdrahtung](../../images/circ/7-Segment-LED_Steckplatine.png "Verdrahtung")
 
-![Schaltplan](../images/circ/7-Segment-LED_Schaltplan.png "Schaltplan")
+![Schaltplan](../../images/circ/7-Segment-LED_Schaltplan.png "Schaltplan")
 
 ### Programm
 
