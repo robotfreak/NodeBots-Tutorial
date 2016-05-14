@@ -6,7 +6,7 @@ Es lassen sich über den I2C Bus auch mehrere LED Matrizen ansteuern. Dazu besit
 
 ### Schaltung
 
-![Verdrahtung](../images/circ/4xLED-Matrix_Steckplatine.png "Verdrahtung")
+![Verdrahtung](../../images/circ/4xLED-Matrix_Steckplatine.png "Verdrahtung")
 
 ### Programm
 
