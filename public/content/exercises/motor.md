@@ -14,6 +14,8 @@ Da der Motor zu viel Strom zieht um ihn direkt an einen Pin des Mikrocontroller 
 
 Da es sich bei einem Motor um eine induktive Lat handelt, ist auch eine [Schutzdiode](../../parts/diode) (in Sperrrichtung, parallel zum Motor geschaltet) obligatorisch. Der Grund: beim Abschalten des Motors, stoppt dieser nicht sofort, sondern dreht sich noch etwas weiter. Dabei wird der Motor zum Generator und indiziert eine Spannung. Diese Spannung wird über die Diode abgeleitet und verhindert die Zerstörung des Transistors.
 
+Eine eigene Stromversorgung für den Motor ist ebenfalls empfehlenswert. Es ist nicht zu empfehlen den Motor mit über das Arduini Board zu versorgen. Lediglich die GND Verbindung von Arduino und Motor Spannungsvwersorgung ist zu verbinden.
+
 ![Verdrahtung](../../images/circ/motor-driver_Steckplatine.png "Verdrahtung")
 
 ![Schaltplan](../../images/circ/motor-driver_Schaltplan.png "Schaltplan")
@@ -29,7 +31,7 @@ board = new five.Board();
 board.on("ready", function() {
   // Create a new `motor` hardware instance.
   motor = new five.Motor({
-    pin: 5
+    pin: 8
   });
 
   // Inject the `motor` hardware into
@@ -72,9 +74,11 @@ board.on("ready", function() {
 
 ### Übungen
 
-## Differential Antrieb
+Mit dem Kommando ``motor.start()`` wird der Motor gestartet und schaltet ´sich nach 2 Sekunden ab. 
 
-Mit einem Motor  könnte der Roboter schon mal vorwärts und rückwärts fahren, wenn der Motor alle Räder des Roboters antreibt. Doch womit steuert man den Roboter, damit er auch rechts oder links fahren kann?
+Über den zusätzlichen Parameter ``speed`` kann die Geschwindigkeit verändert werden. Gibt dazu ``motor.start({speed: 128})`` ein, um den Motor mit halber Geschwindigkeit fahren zu lassen.
 
-Ein zweiter Motor muss her. 
+### Wie geht es weiter?
+
+Leider dreht der Motor nur in eine Richtung. Es fehlt die Möglichkeit zum Umpolung der Motorspannung. Hierzu ist ein richtiger Motor Treiber notwendig. Mit nur einem Motor kann der Roboter zwar fahren, aber wie steuert er nach rechts oder links? Näheres erfahrt ihr im nächsten Kapitel [Zwei Motoren](dual-motor) 
 
