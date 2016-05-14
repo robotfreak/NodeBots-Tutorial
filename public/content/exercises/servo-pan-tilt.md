@@ -1,6 +1,10 @@
 ## Servo Pan Tilt
 
+Nimmt man statt einem Servo gleich zwei gewinnt man einen Freiheitsgrad mehr. Nun kann der Roboter seinen Kopf nicht nur schütteln sondern auch nicken. Diese Komnination nennt man auch Pan & Tilt (Schwenken und Nicken), einem Begriff aus der Videotechnik.
+
 ### Schaltung
+
+Konnte man bei einem einzelnen Servo vieleicht noch auf eine externe Stromversorgung verzichten, ist das bei zwei und mehr Servos unbedingt zu emfehlen. Auch ein Servo kann recht viel Strom zeihen, insbesondere unter Last.
 
 ![Verdrahtung](../../images/circ/servo-pan-tilt_Steckplatine.png "Verdrahtung")
 
@@ -65,6 +69,6 @@ board.on('ready', function () {
   });
 });
 ```
-
-
 ### Übungen
+
+Mit den Cursor Tasten kann der Roboterkopf geschwenkt und genit werden. Im Gegensatz zu den bisherigen Kommandos werden hier die Tastendrücke der Tastatur direkt ausgewertet.
