@@ -14,7 +14,7 @@ Für einen Roboter mit Licht-Sensor(en) können zwei Verhalten programmiert werd
 
 ### Programm
 
-```JavaScript
+```javascript
 var five = require("johnny-five"),
   board, photoresistor;
 
