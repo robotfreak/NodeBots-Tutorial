@@ -13,5 +13,5 @@ Für den nächsten Teil des Tutorials wird eine weitere Anwendung benötigt. Gib
 
 ```node code/robot-actors2.js```
 
-* [Motor](exercises/dual-motor)
-* [Servo](exercises/servo-pan-tilt)
+* [2-fach Motor Treiber](exercises/dual-motor)
+* [Servo Pan Tilt](exercises/servo-pan-tilt)
