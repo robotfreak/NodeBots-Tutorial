@@ -16,7 +16,7 @@ Deshalb kommt hier ein Sensor mit analoger Ansteuerung zum Einsatz, der Maxbotix
 
 ### Programm
 
-```JavaScript
+```javascript
 var five = require("johnny-five");
 var board = new five.Board();
 
