@@ -9,6 +9,6 @@ Starte die Anwendung zu diesem Tutorial  im Terminal Fenster mit dem Befehl:
 ```node code/robot-sensors.js```
 
 * [Licht-Sensor](exercises/ldr)
-* [Ultraschall-Sensor](exercises/hcsr04)
+* [Ultraschall-Sensor](exercises/ultrasonic)
 * [Infrarot-Sensor](exercises/irs)
 
