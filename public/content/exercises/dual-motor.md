@@ -8,7 +8,7 @@
 
 ### Programm
 
-'''JavaScript
+```JavaScript
 var five = require("johnny-five");
 
 var board = new five.Board();
