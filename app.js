@@ -37,7 +37,7 @@ app.use(mds.middleware({
     view: 'markdown'
 }));
 
-//app.use('/', routes);
+app.use('/', routes);
 //app.use('/intro', intro);
 //app.use('/eprimer', eprimer);
 //app.use('/jsprimer', jsprimer); 
