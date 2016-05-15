@@ -5,6 +5,27 @@ var board = new five.Board({
 
 board.on("ready", function() {
 
+  var smileLt = [
+    "00000000",
+    "00000000",
+    "11000000",
+    "01100000",
+    "00110000",
+    "00011111",
+    "00000111",
+    "00000000"
+  ];
+
+  var smileRt = [
+    "00000000",
+    "00000000",
+    "00000011",
+    "00000110",
+    "00001100",
+    "11111000",
+    "11100000",
+    "00000000"
+  ];
 
   var grumpyLt = [
     "00000000",
@@ -124,36 +145,26 @@ board.on("ready", function() {
   eyeRt.clear();
   mouthLt.clear();
   mouthRt.clear();
-  mouthLt.draw(grumpyLt);
-  mouthRt.draw(grumpyRt);
-  this.loop(3000, function() {
-  this.wait(500, function() { 
-    eyeLt.draw(Eyes.roundBigEye);
-    eyeRt.draw(Eyes.roundBigEye);
-  });
-//  this.wait(20, function() { 
-//    eyeLt.draw(Eyes.roundEye);
-//  });
-//  this.wait(20, function() { 
+  mouthLt.draw(smileRt);
+  mouthRt.draw(smileLt);
+
+  this.repl.inject({
+    twink: function() {
+    this.wait(500, function() { 
+      eyeLt.draw(Eyes.roundBigEye);
+      eyeRt.draw(Eyes.roundBigEye);
+    });
     eyeLt.draw(Eyes.ovalEye);
-//  });
-//  this.wait(20, function() { 
     eyeLt.draw(Eyes.closeEye);
-//  });
   });
-  // type `draw("shape_name")` into the repl to see the shape!  
-//  this.repl.inject({
-//    eyes: function(shape) {
-//      eyeLt.draw(five.Led.Matrix.CHARS[shape]);
-//      eyeRt.draw(five.Led.Matrix.CHARS[shape]);
-//    }
-//  });
+
   this.repl.inject({
     eyes: function(shape) {
       eyeLt.draw(shape);
       eyeRt.draw(shape);
     }
   });
+
   this.repl.inject({
     mouth: function(shape) {
       mouthLt.draw(five.Led.Matrix.CHARS[shape]);
