@@ -22,7 +22,7 @@ Eine eigene Stromversorgung für den Motor ist ebenfalls empfehlenswert. Es ist 
 
 ### Programm
 
-```JavaScript
+```javascript
 var five = require("johnny-five"),
   board, motor, led;
 
