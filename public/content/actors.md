@@ -8,4 +8,10 @@ Starte die Anwendung zu diesem Tutorial  im Terminal Fenster mit dem Befehl:
 
 * [Motor](exercises/motor)
 * [Servo](exercises/servo)
+ 
+Für den nächsten Teil des Tutorials wird eine weitere Anwendung benötigt. Gib dazu im Terminal Fenster den folgenden Befehl ein: 
 
+```node code/robot-actors2.js```
+
+* [Motor](exercises/dual-motor)
+* [Servo](exercises/servo-pan-tilt)
