@@ -10,7 +10,7 @@ Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen, Pan & Tilt (Schw
 
 ### Programm
 
-```JavaScript
+```javascript
 var five = require('johnny-five')
 var board = new five.Board()
 
