@@ -1,12 +1,11 @@
 var moment = require("moment");
 var five = require("johnny-five");
-var board = new five.Board({
-  port: "COM105"
-});
+var board = new five.Board();
 
 board.on("ready", function() {
   var digits = new five.Led.Digits({
     controller: "HT16K33",
+    addresses: [0x74]
   });
   var sensor = new five.Sensor("A5");
 

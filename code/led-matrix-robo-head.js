@@ -145,17 +145,19 @@ board.on("ready", function() {
   eyeRt.clear();
   mouthLt.clear();
   mouthRt.clear();
-  mouthLt.draw(smileRt);
-  mouthRt.draw(smileLt);
+  eyeLt.draw(Eyes.roundEye);
+  eyeRt.draw(Eyes.roundEye);
+  mouthLt.draw(smileLt);
+  mouthRt.draw(smileRt);
 
   this.repl.inject({
     twink: function() {
-    this.wait(500, function() { 
-      eyeLt.draw(Eyes.roundBigEye);
-      eyeRt.draw(Eyes.roundBigEye);
-    });
-    eyeLt.draw(Eyes.ovalEye);
-    eyeLt.draw(Eyes.closeEye);
+      eyeLt.draw(Eyes.roundEye);
+      eyeRt.draw(Eyes.roundEye);
+      eyeLt.draw(Eyes.ovalEye);
+      eyeLt.draw(Eyes.closeEye);
+      eyeLt.draw(Eyes.roundEye);
+    }
   });
 
   this.repl.inject({
