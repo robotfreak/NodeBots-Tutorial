@@ -58,11 +58,11 @@ board.on("ready", function() {
   }
 
   var keyMap = {
-    'up': forward,
-    'down': reverse,
-    'left': left,
-    'right': right,
-    'space': stop,
+    '8': forward,
+    '2': reverse,
+    '4': left,
+    '6': right,
+    '5': stop,
     'q': exit
   };
 
@@ -80,3 +80,7 @@ board.on("ready", function() {
     });
 });
 ```
+
+### Übungen
+
+Mit den Nummern Tasten der Tastatur kann der Roboter gesteuert werden. 
