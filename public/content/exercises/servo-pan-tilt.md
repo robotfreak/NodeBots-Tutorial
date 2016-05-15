@@ -1,5 +1,7 @@
 ## Servo Pan Tilt
 
+Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen, Pan & Tilt (Schwenken und Neigen) ist hierzu der Fachbegriff aus der Videotechnik.
+
 ### Schaltung
 
 ![Verdrahtung](../../images/circ/servo-pan-tilt_Steckplatine.png "Verdrahtung")
@@ -66,5 +68,6 @@ board.on('ready', function () {
 });
 ```
 
-
 ### Übungen
+
+Über die Cursor Tasten der Tastatur kann der Roboterkopf bewegt werden.
