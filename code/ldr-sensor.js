@@ -5,16 +5,15 @@ board.on("ready", function() {
   var digits = new five.Led.Digits({
     controller: "HT16K33",
   });
-  var proximity = new five.Proximity({
-    controller: "MB1000",
-    pin: "A4",
+  var ldr = new five.Sensor({
+    pin: "A2",
     freq: "2"
   });
 
-  proximity.on("data", function() {
-    digits.print(this.cm);
-    console.log("Entfernung: ");
-    console.log("  cm  : ", this.cm);
+  sensor.on("change", function() {
+    digits.print(this.value);
+    console.log("Licht: ");
+    console.log("  val : ", this.value);
     console.log("-----------------");
   });
 });

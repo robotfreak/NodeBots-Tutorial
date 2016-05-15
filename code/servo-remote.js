@@ -3,9 +3,9 @@ var board = new five.Board()
 
 board.on('ready', function () {
   var servoPan = new five.Servo({ pin: 4,
-                                  range: [20,160]});
+                                  range: [60,120]});
   var servoTilt = new five.Servo({ pin: 12,
-                                  range: [20,160]});
+                                  range: [60,120]});
 
   function down() {
     servoTilt.min();
