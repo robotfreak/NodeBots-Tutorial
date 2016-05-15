@@ -2,7 +2,7 @@
 
 Eine LED ist wohl die einfachste Form der Anzeige. Sie kann z.B. als Status Anzeige dienen. 
 
-![LED](../../images/parts/LED.png "LED")
+![LED](../../images/parts/led.png "LED")
 
 ### Schaltung
 
