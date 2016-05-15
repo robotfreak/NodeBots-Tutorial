@@ -4,8 +4,6 @@ Ein Servo ist ein kleiner Getriebemotor mit eingebauter Elektronik. Im Gegensatz
 
 ![Servo](../../images/parts/servo.png "Servo")
 
-Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen (zwischen rechts und links sowie oben und unten) . Man spricht hier auch von Freiheitsgraden. 
-
 ### Schaltung
 
 ![Verdrahtung](../../images/circ/servo_Steckplatine.png "Verdrahtung")
