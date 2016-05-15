@@ -5,7 +5,7 @@ board.on("ready", function() {
   var digits = new five.Led.Digits({
     controller: "HT16K33",
   });
-  var ldr = new five.Sensor({
+  var sensor = new five.Sensor({
     pin: "A2",
     freq: "2"
   });
