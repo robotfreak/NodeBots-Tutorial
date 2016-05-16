@@ -45,7 +45,7 @@ board = new five.Board();
 board.on("ready", function() {
   // Create a new `motor` hardware instance.
   motor = new five.Motor({
-    pin: 8
+    pin: 6
   });
 
   // Inject the `motor` hardware into
@@ -80,9 +80,6 @@ board.on("ready", function() {
   // to define the motor speed if a PWM Pin is
   // used to connect the motor.
   motor.start();
-
-  // stop()
-  // Stop the motor. `isOn` property set to |false|
 });
 ```
 
@@ -90,7 +87,7 @@ board.on("ready", function() {
 
 Mit dem Kommando ``motor.start()`` wird der Motor gestartet und schaltet ´sich nach 2 Sekunden ab. 
 
-Über den zusätzlichen Parameter ``speed`` kann die Geschwindigkeit verändert werden. Gibt dazu ``motor.start({speed: 128})`` ein, um den Motor mit halber Geschwindigkeit fahren zu lassen.
+Über einen Funktions Parameter kann die Geschwindigkeit verändert werden. Gibt dazu z.B. ``motor.start(50})`` ein, um den Motor mit langsamer Geschwindigkeit fahren zu lassen.
 
 ### Wie geht es weiter?
 
