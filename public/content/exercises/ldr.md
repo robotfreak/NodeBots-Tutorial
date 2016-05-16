@@ -14,6 +14,20 @@ Für einen Roboter mit Licht-Sensor(en) können zwei Verhalten programmiert werd
 
 ### Programm
 
+Das Programm gibt den Wert des Sensors im Terminal (und auf der 7-Segment Anzeige) aus. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/ldr-sensor.js
+```
+
+unter Windows mit:
+
+```
+node code\ldr-sensor.js
+```
+
 ```javascript
 var five = require("johnny-five"),
   board, photoresistor;
@@ -23,22 +37,14 @@ board = new five.Board();
 board.on("ready", function() {
 
   // Create a new `photoresistor` hardware instance.
-  photoresistor = new five.Sensor({
-    pin: "A2",
-    freq: 20
+  var light = new five.Sensor({
+    pin: "A3",
   });
 
-  // Inject the `sensor` hardware into
-  // the Repl instance's context;
-  // allows direct command line access
-  board.repl.inject({
-    pot: photoresistor
-  });
-
-  // "data" get the current reading from the photoresistor
-  photoresistor.on("data", function() {
+  light.on("change", function() {
+    var lightval = five.Fn.scale(this.value, 1023, 0, 0, 100);
     console.log("Lichtwert: ");
-    console.log(this.value);
+    console.log("  val : ", lightval);
     console.log("-----------------");
   });
 });
