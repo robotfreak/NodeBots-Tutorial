@@ -2,6 +2,8 @@
 
 Damit sich ein Roboter fortbewegen kann, benötigt er einen Antrieb, einen Motor.
 
+![LED](../images/slide4.png)
+
 ## Tutorials
 
 * [Motor](exercises/motor)
