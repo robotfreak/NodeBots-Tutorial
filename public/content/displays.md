@@ -2,6 +2,8 @@
 
 Damit sich der Roboter bemerkbar machen kann, falls er ein Problem hat, sind Anzeigen ein ganz wichtiges Thema. Darum geht es in diesem Teil des Robotik Tutorials.
 
+![LED](../images/slide2.png)
+
 ## Tutorials
 
 * [LED](exercises/led "LED")
