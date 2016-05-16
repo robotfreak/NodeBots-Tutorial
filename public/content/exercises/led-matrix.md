@@ -34,6 +34,20 @@ Und so der entsprechende Abschnitt im Programm:
 
 ### Programm
 
+Das Programm gibt ein Herz Symbol auf der LED-Matrix aus. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/led-matrix-HT16K33.js
+```
+
+unter Windows mit:
+
+```
+node code\led-matrix-HT16K33.js
+```
+
 ```javascript
 var five = require("johnny-five");
 var board = new five.Board();
