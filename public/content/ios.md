@@ -2,6 +2,8 @@
 
 Die Basics der NodeBots Programmierung werden hier behandelt.
 
+![LED](../images/slide1.png)
+
 ## Tutorials
 
 * [LED](/exercises/ex1)
