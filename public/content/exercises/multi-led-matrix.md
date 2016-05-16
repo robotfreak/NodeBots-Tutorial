@@ -10,11 +10,47 @@ Es lassen sich über den I2C Bus auch mehrere LED Matrizen ansteuern. Dazu besit
 
 ### Programm
 
+Das Programm gibt ein Gesicht auf den 4 LED-MAtrizen aus. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/led-matrix-robo-head.js
+```
+
+unter Windows mit:
+
+```
+node code\led-matrix-robo-head.js
+```
+
 ```javascript
 var five = require("johnny-five");
-var board = new five.Board();
+var board = new five.Board(); 
 
 board.on("ready", function() {
+
+  var smileLt = [
+    "00000000",
+    "00000000",
+    "11000000",
+    "01100000",
+    "00110000",
+    "00011111",
+    "00000111",
+    "00000000"
+  ];
+
+  var smileRt = [
+    "00000000",
+    "00000000",
+    "00000011",
+    "00000110",
+    "00001100",
+    "11111000",
+    "11100000",
+    "00000000"
+  ];
 
   var grumpyLt = [
     "00000000",
@@ -38,7 +74,8 @@ board.on("ready", function() {
     "00011000"
   ];
 
-  var grumpyEye = [
+  var Eyes = {
+    grumpyEye: [
     "00011000",
     "01100110",
     "01100110",
@@ -47,36 +84,114 @@ board.on("ready", function() {
     "01111110",
     "01111110",
     "00011000"
-  ];
+    ],
 
-  var eyes = new five.Led.Matrix({
-    addresses: [0x70, 0x71],
+    roundEye: [
+    "00111100",
+    "01111110",
+    "11100111",
+    "11000011",
+    "11000011",
+    "11100111",
+    "01111110",
+    "00111100"
+    ],
+
+    roundBigEye: [
+    "00111100",
+    "01100110",
+    "11000011",
+    "11000011",
+    "11000011",
+    "11000011",
+    "01100110",
+    "00111100"
+    ],
+
+    ovalEye: [
+    "00000000",
+    "00111100",
+    "01111110",
+    "11100111",
+    "11100111",
+    "01111110",
+    "00111100",
+    "00000000"
+    ],
+
+    ovalBigEye: [
+    "00000000",
+    "00111100",
+    "01100110",
+    "11000011",
+    "11000011",
+    "01100110",
+    "00111100",
+    "00000000"
+    ],
+
+    closeEye: [
+    "00000000",
+    "00000000",
+    "00111100",
+    "11111111",
+    "11111111",
+    "00111100",
+    "00000000",
+    "00000000"
+    ],
+  };
+
+  var eyeLt = new five.Led.Matrix({
+    addresses: [0x70],
     controller: "HT16K33",
+    rotation: 4,
+  });
+
+  var eyeRt = new five.Led.Matrix({
+    addresses: [0x71],
+    controller: "HT16K33",
+    rotation: 4,
   });
 
   var mouthLt = new five.Led.Matrix({
     addresses: [0x72],
     controller: "HT16K33",
+    rotation: 4,
   });
 
   var mouthRt = new five.Led.Matrix({
     addresses: [0x73],
     controller: "HT16K33",
+    rotation: 4,
   });
 
-  eyes.clear();
+  eyeLt.clear();
+  eyeRt.clear();
   mouthLt.clear();
   mouthRt.clear();
-  eyes.draw(grumpyEye);
-  mouthLt.draw(grumpyLt);
-  mouthRt.draw(grumpyRt);
+  eyeLt.draw(Eyes.roundEye);
+  eyeRt.draw(Eyes.roundEye);
+  mouthLt.draw(smileLt);
+  mouthRt.draw(smileRt);
 
-  // type `draw("shape_name")` into the repl to see the shape!  
   this.repl.inject({
-    eyes: function(shape) {
-      eyes.draw(five.Led.Matrix.CHARS[shape]);
+    twinkle: function() {
+      eyeLt.draw(Eyes.roundEye);
+      eyeRt.draw(Eyes.roundEye);
+      eyeLt.draw(Eyes.ovalEye);
+      eyeLt.draw(Eyes.closeEye);
+      eyeLt.draw(Eyes.roundEye);
     }
   });
+
+  this.repl.inject({
+    eyes: function(shape) {
+      eyeLt.draw(shape);
+      eyeRt.draw(shape);
+    }
+  });
+
   this.repl.inject({
     mouth: function(shape) {
       mouthLt.draw(five.Led.Matrix.CHARS[shape]);
@@ -88,4 +203,10 @@ board.on("ready", function() {
 ```
 
 ### Übungen
+
+Über den Befehl ```eyes("ovalEye")``` läßt sich die Form der Augen ändern. Probiere als Parameter "ovalEye", "roundEye" oder "grumpyEye" aus
+
+Mit dem Befehl ```twinkle()``` zwinkert der Roboter dir zu.
+
+Mit dem Befehl ```mouth("?")``` kannst du den Roboter 2 Fragezeichen als Mund zeichnen lassen
 
