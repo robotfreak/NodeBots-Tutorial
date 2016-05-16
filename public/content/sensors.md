@@ -4,9 +4,7 @@ In diesem Teil des Robotik Tutorials geht es um Sensoren. Ein Roboter ohne Senso
 
 Es gibt Sensoren für verschiedene Aufgaben, z.B. um Hindernisse zu erkennen oder Linien- Sensoren um den Roboter einer dunklen Linie auf  hellem Grund folgen zu lassen. 
 
-Starte die Anwendung zu diesem Tutorial  im Terminal Fenster mit dem Befehl: 
-
-```node code/robot-sensors.js```
+## Tutorials
 
 * [Licht-Sensor](exercises/ldr)
 * [Ultraschall-Sensor](exercises/ultrasonic)
