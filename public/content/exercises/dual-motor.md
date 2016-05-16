@@ -1,6 +1,15 @@
 ## 2-fach Motor Treiber
 
+Die einfachste Möglichkeit damit sich ein Roboter in alle Richtungen bewegen kann besteht darin, 2 Motoren zu verwenden. Diese Antriebsart nennt sich 'differantial wheeled robot' oder auch 'two wheel drive (2WD).  Damit die Moteren unabhängig voneinander angesteuert werden können ist auch ein 2-fach Motor Treiber notwendig.
+
+Motor-Treiber gibt es in vielen Ausführungen als komplette integrierte Schaltung inklusive Anstuer Logik und Schutzdioden. 
+
 ### Schaltung
+
+Der VN2SP30 Motor Treiber ist für größere Roboter (>3kg) gedacht. Für kleine Roboter (<1kg) tuts es auch ein L298 oder L293D Motor Trieber. Die Ansteuerung ist aber identisch. Je Motor werden 2 Ausgangs Pin für die Drehrichtung und ein PWM-fähiger Ausgangs Pin für die Geschwindigkeit.
+
+Insgesamt 6 Pins ist schon recht viel für einen Roboter. Mit einem kleinen Schaltungs Trick läßt sich die Zahl auf 4 Pins reduzieren.
+
 
 ![Verdrahtung](../../images/circ/dual-motor-driver_Steckplatine.png "Verdrahtung")
 
