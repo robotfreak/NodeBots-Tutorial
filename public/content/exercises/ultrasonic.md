@@ -16,6 +16,19 @@ Deshalb kommt hier ein Sensor mit analoger Ansteuerung zum Einsatz, der Maxbotix
 
 ### Programm
 
+Das Programm gibt den Wert des Sensors im Terminal (und optional auf der 7-Segment Anzeige) aus. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/ultrasonic.js
+```
+
+unter Windows mit:
+
+```
+node code\ultrasonic.js
+```
 ```javascript
 var five = require("johnny-five");
 var board = new five.Board();
@@ -40,3 +53,4 @@ board.on("ready", function() {
 
 ### Übungen
 
+Bewege deine Hand vor dem Sensor hin und her und beobachte den ausgegebenen Sensor Wert
