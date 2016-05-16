@@ -1,21 +1,34 @@
 ## 2-fach Motor Treiber
 
-Die einfachste Möglichkeit damit sich ein Roboter in alle Richtungen bewegen kann besteht darin, 2 Motoren zu verwenden. Diese Antriebsart nennt sich 'differantial wheeled robot' oder auch 'two wheel drive (2WD).  Damit die Moteren unabhängig voneinander angesteuert werden können ist auch ein 2-fach Motor Treiber notwendig.
+Die einfachste Möglichkeit für einen Roboter, der sich in alle Richtungen bewegen kann, besteht darin 2 Motoren zu verwenden. Diese Antriebsart nennt sich 'differantial wheeled robot' oder auch 'two wheel drive (2WD).  Damit die Moteren unabhängig voneinander angesteuert werden können, ist auch ein 2-fach Motor Treiber notwendig.
 
-Motor-Treiber gibt es in vielen Ausführungen als komplette integrierte Schaltung inklusive Anstuer Logik und Schutzdioden. 
+Motor-Treiber gibt es in vielen Ausführungen als komplette integrierte Schaltung inklusive Ansteuer Logik und Schutzdioden. 
 
 ### Schaltung
 
 Der VN2SP30 Motor Treiber ist für größere Roboter (>3kg) gedacht. Für kleine Roboter (<1kg) tuts es auch ein L298 oder L293D Motor Trieber. Die Ansteuerung ist aber identisch. Je Motor werden 2 Ausgangs Pin für die Drehrichtung und ein PWM-fähiger Ausgangs Pin für die Geschwindigkeit.
 
-Insgesamt 6 Pins ist schon recht viel für einen Roboter. Mit einem kleinen Schaltungs Trick läßt sich die Zahl auf 4 Pins reduzieren.
-
+Insgesamt 6 Pins ist schon recht viel für einen Roboter. Mit einem kleinen Schaltungs Trick läßt sich die Zahl auf 4 Pins reduzieren. Es reicht nämlich ein Pin für die Drehrichtung aus. Das zweite Signal ist lediglich dias invertierte erste Signal. Eine Transistorstufe als Inverter übernimmt diesen Job. 
 
 ![Verdrahtung](../../images/circ/dual-motor-driver_Steckplatine.png "Verdrahtung")
 
 ![Schaltplan](../../images/circ/dual-motor-driver_Schaltplan.png "Schaltplan")
 
 ### Programm
+
+Das Programm wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/motor-remote.js
+```
+
+unter Windows mit:
+
+```
+node code\motor-remote.js
+```
 
 ```javascript
 var five = require("johnny-five");
@@ -67,11 +80,11 @@ board.on("ready", function() {
   }
 
   var keyMap = {
-    '8': forward,
-    '2': reverse,
-    '4': left,
-    '6': right,
-    '5': stop,
+    'up': forward,
+    'down': reverse,
+    'left': left,
+    'right': right,
+    'space': stop,
     'q': exit
   };
 
@@ -92,4 +105,6 @@ board.on("ready", function() {
 
 ### Übungen
 
-Mit den Nummern Tasten der Tastatur kann der Roboter gesteuert werden. 
+Mit den Cursor Tasten der Tastatur kann der Roboter gesteuert werden. 
+
+Ein weiteres Programm names ```dual-motor.js``` funktioniert ähnlich. Zusätzlich kann mit den Zahlen 1...9 die Geschwindigkeit eingestellt werden.
