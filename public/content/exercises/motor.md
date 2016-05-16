@@ -22,6 +22,20 @@ Eine eigene Stromversorgung für den Motor ist ebenfalls empfehlenswert. Es ist 
 
 ### Programm
 
+Das Programm startet den Motor für 2 Sekunden. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/motor.js
+```
+
+unter Windows mit:
+
+```
+node code\motor.js
+```
+
 ```javascript
 var five = require("johnny-five"),
   board, motor, led;
