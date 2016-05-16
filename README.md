@@ -14,7 +14,18 @@ https://nodejs.org/en/
 
 Nach dem Download und auspacken des Archives die notwendigen Node Module aus dem Installations Verzeichnis installieren:
 
+Für Linux:
+
 ```
+git clone https://github.com/robotfreak/NodeBotsTutorial
+cd ./NodeBotsTutorial
+npm install
+```
+
+Für Windows [Archiv](https://github.com/robotfreak/NodeBots-Tutorial/archive/master.zip) downloaden, und entpacken nach NodeBotsTutorial
+
+```
+cd NodeBotsTutorial
 npm install
 ```
 
@@ -35,4 +46,16 @@ oder
 
 ```
 http://localhost:3000/
+```
+
+Die Beispielprogramme lädt man vom Installationsordner mit:
+
+unter Linux:
+```
+node ./code/example.js
+```
+
+unter Windows:
+```
+node code\example.js
 ```
