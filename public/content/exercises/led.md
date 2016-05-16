@@ -14,7 +14,7 @@ Zum Betrieb einer LED ist immer ein Widerstand notwendig, der in Reihe zur LED g
 
 ### Programm
 
-Das Programm gibt den Wert des Sensors im Terminal (und auf der 7-Segment Anzeige) aus. Es wird gestartet
+Das Programm läßt die LED im Sekundentakt blinken. Es wird gestartet
 
 unter Linux mit: 
 
