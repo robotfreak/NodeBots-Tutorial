@@ -12,5 +12,47 @@ Ein Servo ist ein kleiner Getriebemotor mit eingebauter Elektronik. Im Gegensatz
 
 ### Programm
 
+Das Programm lässt den Servo für 4 Sekunden schwenken. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/ldr-sensor.js
+```
+
+unter Windows mit:
+
+```
+node code\ldr-sensor.js
+```
+
+```javascript
+var five = require("johnny-five");
+var board = new five.Board();
+ 
+
+board.on("ready", function() {
+  var range = [60, 120];   
+  var servo = new five.Servo({
+    pin: 4,
+    range: range,
+    center: true 
+  });
+  var lap = 0;
+
+  servo.sweep();
+
+  board.wait(4000, function() {
+    servo.stop();
+  });
+  
+  this.repl.inject({
+    servo: servo
+  });
+
+});
+```
+
 ### Übungen
 
+NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere ```servo.center()```, ```servo.min()``````servo.max()``` aus.
