@@ -14,6 +14,20 @@ Zum Betrieb einer LED ist immer ein Widerstand notwendig, der in Reihe zur LED g
 
 ### Programm
 
+Das Programm gibt den Wert des Sensors im Terminal (und auf der 7-Segment Anzeige) aus. Es wird gestartet
+
+unter Linux mit: 
+
+```
+node ./code/led-pwm.js
+```
+
+unter Windows mit:
+
+```
+node code\led-pwm.js
+```
+
 ```javascript
 var five = require("johnny-five"),
     button, led;
