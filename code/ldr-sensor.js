@@ -6,15 +6,22 @@ board.on("ready", function() {
     controller: "HT16K33",
     addresses: [0x74]
   });
-  var sensor = new five.Sensor({
+  var light = new five.Sensor({
     pin: "A3",
-    freq: "100"
   });
 
-  sensor.on("change", function() {
-    digits.print(this.value);
-    console.log("Licht: ");
-    console.log("  val : ", this.value);
+  function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+  }
+  
+
+  light.on("change", function() {
+    var lightval = five.Fn.scale(this.value, 1023, 0, 0, 100);
+    digits.print(pad(lightval, 4));
+    console.log("Lichtwert: ");
+    console.log("  val : ", lightval);
     console.log("-----------------");
   });
 });

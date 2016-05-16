@@ -6,11 +6,11 @@ board.on("ready", function() {
   console.log('ready');
 
   var rightWheel = new five.Motor({
-    pins: { pwm: 11, dir: 8 }
+    pins: { pwm: 6, dir: 7 }
   });
 
   var leftWheel = new five.Motor({
-    pins: { pwm: 6, dir: 7 }
+    pins: { pwm: 11, dir: 8 }
   });
 
   var speed = 100;
@@ -18,26 +18,51 @@ board.on("ready", function() {
   function reverse() {
     leftWheel.reverse(speed);
     rightWheel.reverse(speed);
+    console.log("backward");
   }
 
   function forward() {
     leftWheel.forward(speed);
     rightWheel.forward(speed);
+    console.log("forward");
   }
 
   function stop() {
     leftWheel.stop();
     rightWheel.stop();
+    console.log("stop");
   }
 
   function left() {
     leftWheel.reverse(speed);
     rightWheel.forward(speed);
+    console.log("left");
   }
 
+  function leftForward() {
+    leftWheel.forward(speed);
+    rightWheel.stop(0);
+    console.log("left forward");
+  }
+  function leftReverse() {
+    leftWheel.reverse(speed);
+    rightWheel.stop(0);
+    console.log("left backward");
+  }
   function right() {
     leftWheel.forward(speed);
     rightWheel.reverse(speed);
+    console.log("right");
+  }
+  function rightForward() {
+    rightWheel.forward(speed);
+    leftWheel.stop();
+    console.log("right forward");
+  }
+  function rightReverse() {
+    rightWheel.reverse(speed);
+    leftWheel.stop();
+    console.log("right backward");
   }
 
   function exit() {
@@ -52,6 +77,10 @@ board.on("ready", function() {
     'left': left,
     'right': right,
     'space': stop,
+    '7': leftForward,
+    '1': leftReverse,
+    '9': rightForward,
+    '3': rightReverse,
     'q': exit
   };
 

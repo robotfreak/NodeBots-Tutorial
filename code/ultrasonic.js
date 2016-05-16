@@ -13,9 +13,10 @@ board.on("ready", function() {
   });
 
   proximity.on("data", function() {
-    digits.print(this.cm);
+    var fixed_num = parseFloat(this.cm).toFixed( 1 );
+    digits.print(fixed_num);
     console.log("Entfernung: ");
-    console.log("  cm  : ", this.cm);
+    console.log("  cm  : ", fixed_num);
     console.log("-----------------");
   });
 });
