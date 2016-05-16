@@ -1,4 +1,4 @@
-var five = require("../lib/johnny-five.js"),
+var five = require("johnny-five"),
   board, motor, led;
 
 board = new five.Board();
@@ -6,7 +6,7 @@ board = new five.Board();
 board.on("ready", function() {
   // Create a new `motor` hardware instance.
   motor = new five.Motor({
-    pin: 5
+    pin: 6
   });
 
   // Inject the `motor` hardware into
@@ -42,6 +42,4 @@ board.on("ready", function() {
   // used to connect the motor.
   motor.start();
 
-  // stop()
-  // Stop the motor. `isOn` property set to |false|
 });
