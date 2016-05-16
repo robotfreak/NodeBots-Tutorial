@@ -26,6 +26,6 @@ board.on("ready", function() {
     var servoVal = five.Fn.scale(this.value, 0, 1023, 10, 170);
     // The slider's value will be scaled to match the tilt servo range
     tilt.to(servoVal);
-    digits.print(pad(servoVal,4)); 
+    digits.print(pad(servoVal,4));
   });
 });

@@ -12,7 +12,7 @@ board.on("ready", function() {
 
   function pad(num, size) {
     var s = num+"";
-    while (s.length < size) s = "0" + s;
+    while (s.length < size) s = " " + s;
     return s;
   }
   

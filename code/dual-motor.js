@@ -12,9 +12,20 @@ board.on("ready", function() {
     b: new five.Motor([11, 8])
   };
 
+  var digits = new five.Led.Digits({
+    controller: "HT16K33",
+    addresses: [0x74]
+  });
+
   this.repl.inject({
     motors: motors
   });
+
+  function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) s = " " + s;
+    return s;
+  }
 
   function controller(ch, key) {
     if (key) {
@@ -43,6 +54,7 @@ board.on("ready", function() {
         motors.b.rev(speed * 0.75);
         console.log("left");
       }
+      digits.print(pad(speed, 4));
 
       commands = [].slice.call(arguments);
     } else {
