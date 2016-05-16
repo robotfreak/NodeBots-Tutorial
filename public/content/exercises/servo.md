@@ -55,4 +55,4 @@ board.on("ready", function() {
 
 ### Übungen
 
-NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere ```servo.center()```, ```servo.min()``````servo.max()``` aus.
+NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere ```servo.center()```, ```servo.min()``` und ```servo.max()``` aus.
