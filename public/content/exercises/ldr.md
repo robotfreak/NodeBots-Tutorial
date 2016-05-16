@@ -14,7 +14,7 @@ Für einen Roboter mit Licht-Sensor(en) können zwei Verhalten programmiert werd
 
 ### Programm
 
-Das Programm gibt den Wert des Sensors im Terminal (und auf der 7-Segment Anzeige) aus. Es wird gestartet
+Das Programm gibt den Wert des Sensors im Terminal (und optional auf der 7-Segment Anzeige) aus. Es wird gestartet
 
 unter Linux mit: 
 
@@ -53,9 +53,3 @@ board.on("ready", function() {
 ### Übungen
 
 Lege deine Hand über den Licht-Sensor um so das einfallende Licht abzuschatten. Beobachte dazu die ausgegebenen Werte im Terminal.
-
-Gib im Terminal Fenster das Kommando `mode("moth")` ein, um den Roboter in eine “Motte” zu verwandeln.
- 
-Gib im Terminal Fenster das Kommando `mode("cockroach")` ein, um den Roboter in eine “Kakerlake” zu verwandeln. Vergleiche das Verhalten des Roboters als Kakerlake mit dem der Motte
-
-
