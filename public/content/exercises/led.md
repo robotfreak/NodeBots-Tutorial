@@ -16,7 +16,7 @@ Eine LED ist wohl die einfachste Form der Anzeige. Sie kann z.B. als Status Anze
 
 ### Schaltung
 
-Zum Betrieb einer LED ist immer ein Widerstand notwendig, der in Reihe zur LED geschaltet wird.
+Zum Betrieb einer LED ist immer ein Widerstand notwendig, der in Reihe zur LED geschaltet wird. Es wird lediglich ein PWM-fähiger Pin benötigt, damit auch die Helligkeit der LED geändert werden kann. Beim Arduino Micro ist im Gegensatz zum Arduino Uno auch Pin 13 PWM fähig, ebenso wie Pin 11, 10, 9, 6, 5 und 3.
 
 ![Verdrahtung](../../images/circ/01-LED_Steckplatine.png "Verdrahtung")
 
