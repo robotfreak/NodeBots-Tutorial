@@ -3,6 +3,10 @@
 
 Es lassen sich über den I2C Bus auch mehrere LED Matrizen ansteuern. Dazu besitzt jede Anzeige eine 2-3 stellige Adresse, die über Lötbrücken geändert werden kann. Natürlich muss dann jede Anzeige eine eigene individuelle Adresse bekommen. So läßt sich z.B. aus 4 LED Matrizen ein Gesicht, bestehend aus zwei Augen (2 LED Matrizen) und einem Mund (ebenfalls 2 LED Matrizen) bilden. Damit ergeben sich noch mehr Anzeige Möglichkeiten und der Roboter erhält ein Gesicht um z.B. Gemütszustände anzuzeigen.
 
+* Arduino Micro
+* Steckplatine
+* Drahtbrücken Set
+* 4 x Adafruit 8x8 LED Matrix mit I2C Backpack
 
 ### Schaltung
 
@@ -210,3 +214,6 @@ Mit dem Befehl ```twinkle()``` zwinkert der Roboter dir zu.
 
 Mit dem Befehl ```mouth("?")``` kannst du den Roboter 2 Fragezeichen als Mund zeichnen lassen
 
+### Weiterführende Links
+
+* [Johnny-Five LED.Matrix API](http://johnny-five.io/api/led.matrix/)
