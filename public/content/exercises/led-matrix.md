@@ -25,6 +25,12 @@ Und so der entsprechende Abschnitt im Programm:
     "00111100"
   ];
 ```
+### Teileliste
+
+* Arduino Micro
+* Steckplatine
+* Drahtbrücken Set
+* Adafruit 8x8 LED Matrix mit I2C Backpack
 
 ### Schaltung
 
@@ -89,3 +95,6 @@ Du kannst die LED-Matrix  auch über das Terminal Fenster steuern.
 
 Probiere die Funktion `draw` mit verschiedenen Buchstaben, Zahlen und Sonderzeichen aus (z.B. `draw("$").für das Dollar-Zeichen. Es gibt aiuch einige Emojis, wie z.B. `draw("smile")` oder `draw("angryface")` 
 
+### Weiterführende Links
+
+* [Johnny-Five LED.Matrix API](http://johnny-five.io/api/led.matrix/)
