@@ -1,8 +1,18 @@
 ## LED
 
+Das einfachste Arduino Programm, in Anlehnung an das einfachste C Programm 'Hallo Welt', wird 'Hallo Arduino' genannt. Dabei wird eine LED (light emitting diode) zum Blinken gebracht.
 Eine LED ist wohl die einfachste Form der Anzeige. Sie kann z.B. als Status Anzeige dienen. 
 
 ![LED](../../images/parts/led.png "LED")
+
+### Teileliste
+
+* Arduino Micro
+* Steckplatine
+* Drahtbrücken Set
+* 5mm LED 
+* 680 Ohm Widerstand (blau-grau-braun)
+
 
 ### Schaltung
 
@@ -62,5 +72,10 @@ Probiere folgende Parameter für die Funktion `led` aus (z.B. `led.pulse`). Eini
 ```
 
 Zum Beenden einer Animation wie `strobe, pulse oder fade` gib `led.stop` ein
+
+### Mehr Informationen
+
+* [Johnny-Five LED Beispiele](http://johnny-five.io/examples/led/)
+* [Johnny-Five LED API](http://johnny-five.io/api/led)
 
 
