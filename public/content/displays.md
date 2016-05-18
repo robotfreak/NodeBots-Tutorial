@@ -10,7 +10,7 @@ Damit sich der Roboter bemerkbar machen kann, falls er ein Problem hat, sind Anz
 * [LED-Matrix](exercises/led-matrix "LED-Matrix")
 * [7-Segment Anzeige](exercises/7-segment "7-Segment Anzeige")
 * [Roboter Gesicht aus LED-Matrizen](exercises/multi-led-matrix "Roboter Gesicht aus LED-Matrizen")
-* [Piezo Lautsprecher](exercises/buzzer "Piezo Lautsprecher")
+* [Piezo Lautsprecher](exercises/piezo "Piezo Lautsprecher")
 
 
 ## Weiterführende Themen
