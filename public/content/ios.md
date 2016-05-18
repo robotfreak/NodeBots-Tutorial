@@ -8,5 +8,5 @@ Die Basics der NodeBots Programmierung werden hier behandelt.
 
 * [LED](/exercises/led)
 * [Taster](/exercises/button)
-* [Tastatur](/exercises/ekeypad)
+* [Tastatur](/exercises/keypad)
 * [Potentiometer](/exercises/poti)
