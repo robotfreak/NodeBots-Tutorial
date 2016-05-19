@@ -12,5 +12,6 @@
 * [Anzeigen](/displays)
 * [Sensoren](/sensors)
 * [Aktoren](/actors)
+* [komplette Roboter](/robots)
 
 
