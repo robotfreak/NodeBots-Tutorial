@@ -4,6 +4,11 @@ Ein Piezo ist ein kleiner Lautsprecher, der Signal-Töne ausgeben kann.
 
 ![Piezo](../../images/parts/piezo.png "Piezo")
 
+### Was wird benötigt
+
+* Piezo Lautsprecher
+* optional, NPN Transistor BC547, 2k2 Widerstand
+
 ### Schaltung
 
 Nicht unbedingt notwendig ist die Transistor Stufe.
