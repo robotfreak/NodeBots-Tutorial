@@ -1,5 +1,5 @@
 
-## Mehrere LED Matrizen
+## Roboter Gesicht aus mehreren LED Matrizen
 
 Es lassen sich über den I2C Bus auch mehrere LED Matrizen ansteuern. Dazu besitzt jede Anzeige eine 2-3 stellige Adresse, die über Lötbrücken geändert werden kann. Natürlich muss dann jede Anzeige eine eigene individuelle Adresse bekommen. So läßt sich z.B. aus 4 LED Matrizen ein Gesicht, bestehend aus zwei Augen (2 LED Matrizen) und einem Mund (ebenfalls 2 LED Matrizen) bilden. Damit ergeben sich noch mehr Anzeige Möglichkeiten und der Roboter erhält ein Gesicht um z.B. Gemütszustände anzuzeigen.
 
