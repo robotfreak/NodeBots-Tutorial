@@ -1,3 +1,3 @@
 ## komplette Roboter Projekte
 
-* [Nyan Cat Roboter](./exercises/nyan-cat] 
+* [Nyan Cat Roboter](exercises/nyan-cat) 
