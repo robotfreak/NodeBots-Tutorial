@@ -1,6 +1,6 @@
 ## Ultraschall Radar
 
-Dieses Beispiel zeigt die Daten eines Ultraschall Sensors in einer Art Radar-Ansicht.   
+Dieses Beispiel zeigt die Daten eines Ultraschall Sensors, der mit einem Servo geschwenkt wird, in einer Art Radar-Ansicht.   
 
 ![Radar](../../images/radar.png)
 
