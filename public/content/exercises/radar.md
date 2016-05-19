@@ -7,8 +7,8 @@ Dieses Beispiel zeigt die Daten eines Ultraschall Sensors, der mit einem Servo g
 ### Was wird benötigt
 
 * Ultraschallsensor, siehe [Ultraschallsensor](./ultrasonic)
-* 4x Adafruit 8x8 LED Matrix mit I2C Backpack, siehe [Roboter Gesicht aus mehreren LED Matrizen](./multi-led-matrix)
-* 2 Servos und Pan/Tilt Kopf, siehe [Roboter Kopf mit Servo Pan Tilt](./servo-pan-tilt)
+* Servo und Pan/Tilt Kopf, siehe [Roboter Kopf mit Servo Pan Tilt](./servo-pan-tilt)
+* optional, 4x Adafruit 8x8 LED Matrix mit I2C Backpack, siehe [Roboter Gesicht aus mehreren LED Matrizen](./multi-led-matrix)
 
 ### Programm
 
