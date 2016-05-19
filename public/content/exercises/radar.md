@@ -1,5 +1,6 @@
 ## Ultraschall Radar
 
+Dieses Beispiel zeigt die Daten eines Ultraschall Sensors in einer Art Radar-Ansicht.   
 
 ![Radar](../../images/radar.png)
 
@@ -11,7 +12,7 @@
 
 ### Programm
 
-Das Programm verwendet den Browser zur Darstellung der Radar Bildes. 
+Das Programm verwendet den Browser zur Darstellung der Radar Bildes. Öffne dazu ein Browser-Fenster mit der Adresse ```http://localhost:8080``` und starte dann das Programm unter Linux mit ```node ./code/radar.js```, unter Windows mit ```node code\radar.js```
 
 ```javascript
 var five = require("johnny-five"),
