@@ -15,19 +15,8 @@ Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen, Pan & Tilt (Schw
 
 ### Programm
 
-Mit dem Programm lässt sich der Roboterkopf über die Cursor Tasten steuern . Es wird gestartet
-
-unter Linux mit: 
-
-```
-node ./code/servo-remote.js
-```
-
-unter Windows mit:
-
-```
-node code\servo-remote.js
-```
+Mit dem Programm lässt sich der Roboterkopf über die Cursor Tasten steuern . Es wird unter Linux mit ```node ./code/servo-remote.js```
+unter Windows mit ```node code\servo-remote.js``` gestartet.
 
 ```javascript
 var five = require('johnny-five')
