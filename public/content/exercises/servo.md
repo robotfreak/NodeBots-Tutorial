@@ -56,3 +56,8 @@ board.on("ready", function() {
 ### Übungen
 
 NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere ```servo.center()```, ```servo.min()``` und ```servo.max()``` aus.
+
+## Mehr Informationen
+
+* [Johnny-Five Servo Beispiele](http://johnny-five.io/examples/servo/)
+* [Johnny-Five Servo API](http://johnny-five.io/api/servo)
