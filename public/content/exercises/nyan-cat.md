@@ -14,6 +14,8 @@ Die [Nyan Cat](https://www.youtube.com/watch?v=QH2-TGUlwu4) ist ein bekanntes Yo
 Das Programm ist ein Mix aus den Beispielen led-matrix-robo-head.js, j5-songs.js und servo.js. Die Ablaufsteuerung sorgt dafür, das nach 5 Sekunden der Roboter erwacht, seinen Kopf dreht und aus dem Lautsprecher die Nyan-Cat ertönt.
 Dann legt sich der Roboter wieder schlafen.
 
+Das Programm wird unter Linux mit ```node ./code/piezo.js```, unter Windows mit ```node code\piezo.js``` gestartet.
+
 ```javascript
 var five = require('johnny-five');
 var songs = require('j5-songs');
