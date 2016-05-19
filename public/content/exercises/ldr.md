@@ -53,3 +53,8 @@ board.on("ready", function() {
 ### Übungen
 
 Lege deine Hand über den Licht-Sensor um so das einfallende Licht abzuschatten. Beobachte dazu die ausgegebenen Werte im Terminal.
+
+## Mehr Informationen
+
+* [Johnny-Five Sensor Beispiele](http://johnny-five.io/examples/sensor/)
+* [Johnny-Five Sensor API](http://johnny-five.io/api/sensor)
