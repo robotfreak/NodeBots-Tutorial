@@ -1,6 +1,6 @@
 ## Ultraschall Radar
 
-Dieses Beispiel zeigt die Daten eines Ultraschall Sensors, der mit einem Servo geschwenkt wird, in einer Art Radar-Ansicht.   
+Dieses Beispiel stellt die Daten eines Ultraschall Sensors, der mit einem Servo geschwenkt wird, grafisch in einer Art Radar-Ansicht dar.   
 
 ![Radar](../../images/radar.png)
 
@@ -143,10 +143,4 @@ board.on("ready", function() {
     });
   });
 });
-
-
-// // Reference
-// //
-// // http://www.maxbotix.com/pictures/articles/012_Diagram_690X480.jpg
-
 ```
