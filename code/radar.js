@@ -41,7 +41,7 @@ board.on("ready", function() {
   child.exec("open http://localhost:8080/");
 
   // Starting scanner scanning position (degrees)
-  degrees = 1;
+  degrees = 21;
 
   // Servo scanning steps (degrees)
   step = 1;
@@ -93,7 +93,7 @@ board.on("ready", function() {
     if (isOver || isUnder) {
       if (isOver) {
         io.sockets.emit("reset");
-        degrees = 0;
+        degrees = 20;
         step = 1;
         last = -1;
       } else {

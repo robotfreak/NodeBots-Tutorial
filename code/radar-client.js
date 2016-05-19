@@ -4,7 +4,7 @@
 
   var socket, radars, colors, addl;
 
-  socket = io.connect("http://localhost");
+  socket = io.connect("http://localhost:8080");
   radars = [];
   colors = {
     // Color Constants
