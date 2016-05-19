@@ -1,6 +1,6 @@
-## Piezo Buzzer
+## Piezo Lautsprecher
 
-Ein Piezo Buzzer ist ein kleiner Lautsprecher, der Signal-Töne ausgeben kann. 
+Ein Piezo ist ein kleiner Lautsprecher, der Signal-Töne ausgeben kann. 
 
 ![Piezo](../../images/parts/piezo.png "Piezo")
 
@@ -14,19 +14,7 @@ Nicht unbedingt notwendig ist die Transistor Stufe.
 
 ### Programm
 
-Das Programm gibt eine Melodie aus. Erkennst du die Melodie? Es wird gestartet
-
-unter Linux mit: 
-
-```
-node ./code/piezo.js
-```
-
-unter Windows mit:
-
-```
-node code\piezo.js
-```
+Das Programm gibt eine Melodie aus. Erkennst du die Melodie? Es wird unter Linux mit ```node ./code/piezo.js```, unter Windows mit ```node code\piezo.js``` gestartet.
 
 ```javascript
 var five = require("johnny-five"),
