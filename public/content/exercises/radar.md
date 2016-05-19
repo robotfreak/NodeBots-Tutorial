@@ -1,7 +1,7 @@
 ## Ultraschall Radar
 
 
-[Radar](../../images/radar.png)
+![Radar](../../images/radar.png)
 
 ### Was wird benötigt
 
