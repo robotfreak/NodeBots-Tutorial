@@ -79,3 +79,8 @@ board.on('ready', function () {
 ### Übungen
 
 Über die Cursor Tasten der Tastatur kann der Roboterkopf bewegt werden.
+
+## Mehr Informationen
+
+* [Johnny-Five Servo Beispiele](http://johnny-five.io/examples/servo/)
+* [Johnny-Five Servo API](http://johnny-five.io/api/servo)
