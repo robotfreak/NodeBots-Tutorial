@@ -1,6 +1,11 @@
-## Servo Pan Tilt
+## Roboter Kopf mit Servo Pan Tilt
 
 Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen, Pan & Tilt (Schwenken und Neigen) ist hierzu der Fachbegriff aus der Videotechnik.
+
+### Was wird benötigt?
+
+* 2 Standard Servos
+* Pan Tilt Halterung, z.B. [Lynx B](http://www.lynxmotion.com/p-287-lynx-b-pan-and-tilt-kit-black-anodized.aspx) von Lynxmotion
 
 ### Schaltung
 
