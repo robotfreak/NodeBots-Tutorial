@@ -7,6 +7,10 @@ Ein Roboter der die hellste Stelle eines Raumes sucht, die Motte.
 * 2 LDR Sensoren, siehe [Licht-Sensor](./ldr)
 * Roboter Chasssis mit 2 Motoren und 2-fach Motor-Treiber, siehe [2-fach Motor Treiber](./dual-motor)
 
+### Schaltplan
+
+![Verdrahtung](../../images/circ/moth_Steckplatine.png)
+
 ### Programm
 
 ```javascript
@@ -100,3 +104,8 @@ board.on("ready", function() {
   });
 });
 ```
+
+### Übungen
+
+Wie könnte man das Programm ändern, das aus der Motte eine Kakerlake wird. Kleiner Tip, Kakerlaken meiden das Licht.
+Die Lösung findest du im Programm `code/cockroach.js`
