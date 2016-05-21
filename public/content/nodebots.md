@@ -81,7 +81,7 @@ npm install johnny-five -g
 Starte die Beispiele aus dem Run code examples from the terminal e.g.
 
 ```shell
-node code/CIRC01-code-led-a-strobe.js
+node code/led.js
 ```
 
 ### Benutzung von REPL
@@ -90,7 +90,7 @@ Johnny-Five stellt eine Read-Eval-Print-Loop (REPL) zur Verfügung. Damit könne
 
 ## Lizenz
 
-Das komplette Projekt ist auf [Github](https://github.com/RobotFreak/node-arduino-tuts) verfügbar  
+Das komplette Projekt ist auf [Github](https://github.com/RobotFreak/NodeBots-Tutorial) verfügbar  
 
 Die Progamm Beispiele stehen unter einer MIT Lizenz
 
