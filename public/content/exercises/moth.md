@@ -4,7 +4,7 @@ Ein Roboter der die hellste Stelle eines Raumes sucht, die Motte.
 
 ### Was wird benötigt?
 
-* 2 LDR Sensoren, siehe [LDR](./ldr)
+* 2 LDR Sensoren, siehe [Licht-Sensor](./ldr)
 * Roboter Chasssis mit 2 Motoren und 2-fach Motor-Treiber, siehe [2-fach Motor Treiber](./dual-motor)
 
 ### Programm
