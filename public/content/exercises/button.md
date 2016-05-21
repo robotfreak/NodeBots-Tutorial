@@ -2,7 +2,7 @@
 
 In dieser Übung lernen wie ein Eingabe Element kennen, den Taster. In der folgenden Übung wird der Zusatnd eines Tasters abgefragt und der Zustand über die LED und die Konsole angezeigt.
 ```shell
-node code/03-code-button.js
+node code/button.js
 ```
 
 Drücke `Control-D` um das Program zu beenden.
@@ -30,7 +30,7 @@ Der Schaltplan:
 
 ### Programm
 
-Das Javascript Programm befindet sich unter `code/03-code-button.js`
+Das Javascript Programm befindet sich unter `code/button.js`
 
 ```javascript
 var five = require("johnny-five"),
@@ -60,3 +60,8 @@ five.Board().on("ready", function() {
   });
 });
 ```
+
+### Mehr Informationen
+
+* [Johnny-Five LED Beispiele](http://johnny-five.io/examples/button/)
+* [Johnny-Five LED API](http://johnny-five.io/api/button)
