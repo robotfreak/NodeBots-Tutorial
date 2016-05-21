@@ -1,11 +1,6 @@
 ## Taster
 
 In dieser Übung lernen wie ein Eingabe Element kennen, den Taster. In der folgenden Übung wird der Zusatnd eines Tasters abgefragt und der Zustand über die LED und die Konsole angezeigt.
-```shell
-node code/button.js
-```
-
-Drücke `Control-D` um das Program zu beenden.
 
 ### Teileliste
 
@@ -30,7 +25,9 @@ Der Schaltplan:
 
 ### Programm
 
-Das Javascript Programm befindet sich unter `code/button.js`
+Das Javascript Programm befindet sich unter `code/button.js` Es wird unter Linux mit `node ./code/button.js` unter Windows mit `node code\button.js` gestartet.
+
+Drücke `Control-D` um das Program zu beenden.
 
 ```javascript
 var five = require("johnny-five"),
