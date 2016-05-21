@@ -1,5 +1,7 @@
 ## Kollisions Vermeider
 
+Ein Roboter, der Hindernissen ausweichen kann.
+
 ### Was wird benötigt?
 
 * [Ultraschall-Sensor](./ultrasonic)
