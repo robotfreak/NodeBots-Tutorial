@@ -36,6 +36,77 @@ board = new five.Board();
 board.on("ready", function() {
   var center, degrees, step, facing, range, scanner, soi, ping, last;
 
+  var eyeLt = new five.Led.Matrix({
+    addresses: [0x70],
+    controller: "HT16K33",
+    rotation: 4,
+  });
+
+  var eyeRt = new five.Led.Matrix({
+    addresses: [0x71],
+    controller: "HT16K33",
+    rotation: 4,
+  });
+
+  var mouthLt = new five.Led.Matrix({
+    addresses: [0x72],
+    controller: "HT16K33",
+    rotation: 4,
+  });
+
+  var mouthRt = new five.Led.Matrix({
+    addresses: [0x73],
+    controller: "HT16K33",
+    rotation: 4,
+  });
+
+  var Eyes = {
+
+    roundEye: [
+    "00111100",
+    "01111110",
+    "11100111",
+    "11000011",
+    "11000011",
+    "11100111",
+    "01111110",
+    "00111100"
+    ],
+
+    targetEye: [
+    "00011000",
+    "00011000",
+    "00011000",
+    "11111111",
+    "11111111",
+    "00011000",
+    "00011000",
+    "00011000"
+    ],
+
+  };
+
+  var smileLt = [
+    "00000000",
+    "00000000",
+    "11000000",
+    "01100000",
+    "00110000",
+    "00011111",
+    "00000111",
+    "00000000"
+  ];
+
+  var smileRt = [
+    "00000000",
+    "00000000",
+    "00000011",
+    "00000110",
+    "00001100",
+    "11111000",
+    "11100000",
+    "00000000"
+  ];
 
   // Open Radar view
   child.exec("open http://localhost:8080/");
@@ -70,12 +141,26 @@ board.on("ready", function() {
     range: range
   });
 
+  // Servo instance (tilt)
+  tilt = new five.Servo({
+    pin: 12,
+    range: range
+  });
+
   this.repl.inject({
     scanner: scanner
   });
 
-  // Initialize the scanner servo at 0°
+  // Initialize the robot face
+  eyeLt.draw(Eyes.roundEye);
+  eyeRt.draw(Eyes.targetEye);
+  mouthLt.draw(smileLt);
+  mouthRt.draw(smileRt);
+
+  // Initialize the scanner servo at minimum
   scanner.min();
+  // Initialize the tilt servo at center
+  tilt.center();
 
   // Scanner/Panning loop
   this.loop(100, function() {
