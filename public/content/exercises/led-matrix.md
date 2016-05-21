@@ -40,19 +40,7 @@ Und so der entsprechende Abschnitt im Programm:
 
 ### Programm
 
-Das Programm gibt ein Herz Symbol auf der LED-Matrix aus. Es wird gestartet
-
-unter Linux mit: 
-
-```
-node ./code/led-matrix-HT16K33.js
-```
-
-unter Windows mit:
-
-```
-node code\led-matrix-HT16K33.js
-```
+Das Programm gibt ein Herz Symbol auf der LED-Matrix aus. Es wird unter Linux mit `node ./code/led-matrix-HT16K33.js`, unter Windows mit `node code\led-matrix-HT16K33.js` gestartet.
 
 ```javascript
 var five = require("johnny-five");
@@ -91,9 +79,9 @@ board.on("ready", function() {
 
 ### Übungen
 
-Du kannst die LED-Matrix  auch über das Terminal Fenster steuern. 
+Du kannst die LED-Matrix auch über das Terminal Fenster steuern. 
 
-Probiere die Funktion `draw` mit verschiedenen Buchstaben, Zahlen und Sonderzeichen aus (z.B. `draw("$").für das Dollar-Zeichen. Es gibt aiuch einige Emojis, wie z.B. `draw("smile")` oder `draw("angryface")` 
+Probiere die Funktion `draw` mit verschiedenen Buchstaben, Zahlen und Sonderzeichen aus (z.B. `draw("$").für das Dollar-Zeichen. Es gibt auch einige Emojis, wie z.B. `draw("smile")` oder `draw("angryface")` 
 
 ### Weiterführende Links
 
