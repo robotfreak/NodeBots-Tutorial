@@ -3,6 +3,7 @@
 Die [Nyan Cat](https://www.youtube.com/watch?v=QH2-TGUlwu4) ist ein bekanntes Youtube Video mit über 100 Millionen Klicks. 
 Aus der Kombination einiger hier vorgestellter Beispielen lässt sich ein Nyan Cat Roboter bauen.
 
+![Nyan-Cat](../../images/giphy.gif)
 ### Was wird benötigt?
 
 * 4x Adafruit 8x8 LED Matrix mit I2C Backpack, siehe [Roboter Gesicht aus mehreren LED Matrizen](./multi-led-matrix)
