@@ -7,6 +7,10 @@ Ein Roboter, der Hindernissen ausweichen kann.
 * [Ultraschall-Sensor](./ultrasonic)
 * Roboter Chasssis mit 2 Motoren und [2-fach Motor-Treiber](./dual-motor)
 
+### Schaltplan
+
+![Verdrahtung](../../images/circ/collision-avoid_Steckplatine.png)
+
 ### Programm
 
 Das Programm läßt den Roboter zunächst vorwärts fahren. Unterschreitet der Ultraschall Sensor einen bestimmten Wert, stoppt der Roboter, fährt ein Stück rückwärts und ändert dann die Fahrtrichtung. Es wird unter Linux mit `node ./code/collision-avoid.js` unter Windows mit `node code\collision-avoid.js` gestartet.
