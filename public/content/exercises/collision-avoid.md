@@ -9,6 +9,10 @@ Ein Roboter, der Hindernissen ausweichen kann.
 
 ### Programm
 
+Das Programm läßt den Roboter zunächst vorwärts fahren. Unterschreitet der Ultraschall Sensor einen bestimmten Wert, stoppt der Roboter, fährt ein Stück rückwärts und ändert dann die Fahrtrichtung. Es wird unter Linux mit `node ./code/collision-avoid.js` unter Windows mit `node code\collision-avoid.js` gestartet.
+
+Drücke `Control-D` um das Program zu beenden.
+
 ```javascript
 var five = require("johnny-five");
 var temporal = require("temporal");
