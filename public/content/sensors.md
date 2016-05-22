@@ -10,5 +10,13 @@ Es gibt Sensoren für verschiedene Aufgaben, z.B. um Hindernisse zu erkennen ode
 
 * [Licht-Sensor](exercises/ldr)
 * [Ultraschall-Sensor](exercises/ultrasonic)
-* [Infrarot-Sensor](exercises/irs)
+* [Linien-Sensor](exercises/line-sensor] 
+
+## Weiterführende Themen
+
+Leider ist der Roboter Kopf noch etwas starr. es wäre schön, wenn er auch seinen Kopf auch bewegen könnte. Damit kann der Kopf des Roboters vorprogrammierte Bewegungen durchführen. Servos lernen wir im Tutorial über [Roboter Antriebe](/actors) kennen.
+
+Weiterhin wäre es schön, wenn der Roboter Anzeigen hätte, mit denen er . Näheres dazu lernt man im Kapitel über [Roboter Anzeigen](/displays). 
+
+Alles zusammen ergibt erst einen kompletten Roborer. Im Kapitel [komplette Roboter](/robots) werden einige Beispiele vorgestellt.
 
