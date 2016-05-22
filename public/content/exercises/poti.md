@@ -4,12 +4,6 @@ In dieser Übung lernen wir ein neues Bauteil kenne. Das Potentiometer, ein Wide
 
 Es werden die selben Bauteile benötigt wie im ersten Beispiel. Zusätzlich kommt noch das Potentiometer dazu. Es wird ein PWM-fähiger Pin benötigt. Beim Arduino Micro ist im Gegensatz zum Arduino Uno auch Pin 13 PWM fähig, ebenso wie Pin 11, 10, 9, 6, 5 und 3.
 
-```shell
-node code/05-code-poti.js`
-```
-
-Über die Kommandozeile wird auch der gelesen Analog-Wert des Potentiometers angezeigt. Drücke `Control-D` um das Program zu beenden.
-
 ## Teileliste
 
 * Arduino Micro
@@ -32,7 +26,12 @@ Der Schaltplan:
 
 ## Programm
 
-Das Javascript Programm befindet sich unter `code/05-code-poti.js`
+Über die Kommandozeile wird auch der gelesen Analog-Wert des Potentiometers angezeigt.
+
+Das Javascript Programm befindet sich unter `code/poti.js` 
+Es wird unter Linux mit `node ./code/poti.js` unter Windows mit `node code\poti.js` gestartet.
+
+Drücke `Control-D` um das Program zu beenden.
 
 ```javascript
 var five = require("johnny-five");

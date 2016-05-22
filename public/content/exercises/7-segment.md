@@ -13,19 +13,10 @@ Eine Sonderform der LED-Matrix ist die 7-Segment Anzeige. Mit den 7 LEDs können
 
 ### Programm
 
-Das Programm stellt eine Uhr auf der 7-Segment Anzeige dar. Es wird gestartet
+Das Programm stellt eine Uhr auf der 7-Segment Anzeige dar.
+Es wird unter Linux mit `node ./code/led-digits-clock-HT16K33.js` unter Windows mit `node code\led-digits-clock-HT16K33.js` gestartet.
 
-unter Linux mit: 
-
-```
-node ./code/led-digits-clock-HT16K33.js
-```
-
-unter Windows mit:
-
-```
-node code\led-digits-clock-HT16K33.js
-```
+Drücke `Control-D` um das Program zu beenden.
 
 ```javascript
 var moment = require("moment");
@@ -53,4 +44,9 @@ function time(showColon) {
 }
 
 ```
+
+### Weitere Informationen
+
+* [Johnny-Five LED Digits Uhr Beispiel](http://johnny-five.io/examples/led-digits-clock-HT16K33/)
+* [Johnny-Five LED.Digits API](http://johnny-five.io/api/led.digits/)
 

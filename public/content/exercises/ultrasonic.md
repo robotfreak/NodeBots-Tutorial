@@ -53,4 +53,10 @@ board.on("ready", function() {
 
 ### Übungen
 
-Bewege deine Hand vor dem Sensor hin und her und beobachte den ausgegebenen Sensor Wert
+Bewege deine Hand vor dem Sensor hin und her und beobachte den ausgegebenen Sensor Wert.
+
+### Mehr Informationen
+
+[Johnny-Five Ultraschall Sensor Beispiel](http://johnny-five.io/examples/proximity-mb1000/)
+[Johnny-Five Sonar API](http://johnny-five.io/api/sonar)
+[Johnny-Five Proximity API](http://johnny-five.io/api/proximity)

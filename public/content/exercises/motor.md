@@ -22,19 +22,7 @@ Eine eigene Stromversorgung für den Motor ist ebenfalls empfehlenswert. Es ist 
 
 ### Programm
 
-Das Programm startet den Motor für 2 Sekunden. Es wird gestartet
-
-unter Linux mit: 
-
-```
-node ./code/motor.js
-```
-
-unter Windows mit:
-
-```
-node code\motor.js
-```
+Das Programm startet den Motor für 2 Sekunden. Es wird unter Linux mit `node ./code/motor.js` unter Windows mit `node code\motor.js` gestartet
 
 ```javascript
 var five = require("johnny-five"),
@@ -85,9 +73,9 @@ board.on("ready", function() {
 
 ### Übungen
 
-Mit dem Kommando ``motor.start()`` wird der Motor gestartet und schaltet ´sich nach 2 Sekunden ab. 
+Mit dem Kommando `motor.start()` wird der Motor gestartet und schaltet sich nach 2 Sekunden ab. 
 
-Über einen Funktions Parameter kann die Geschwindigkeit verändert werden. Gibt dazu z.B. ``motor.start(50})`` ein, um den Motor mit langsamer Geschwindigkeit fahren zu lassen.
+Über einen Funktions Parameter kann die Geschwindigkeit verändert werden. Gibt dazu z.B. `motor.start(50)` ein, um den Motor mit langsamer Geschwindigkeit fahren zu lassen.
 
 ### Wie geht es weiter?
 

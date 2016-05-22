@@ -1,4 +1,4 @@
-## LInien Sensor
+## Linien Sensor
 
 Nit einem Linien Sensor kann ein Roboter einer Linie auf dem Boden folgen. Wichtig ist dabei das sich die Linie vom Untergrund hervorhebt. Eine schwarze Linie auf weissem Untergrund wäre z.B. ideal.
 
@@ -30,4 +30,7 @@ Das Sparkfun Line Sensor Array wird lieder nicht direkt von der Johny-Five Bibli
 
 Bastle dir eine Linienfolger Vorlage. Dazu eignet sich ein weisses Blatt Papier und schwarzes Klebeband. Klebe eine Linie Klebeband auf das Papier, fertig. Bewege das Papier uner dem Sensor und beobachte die Sensorwerte
 
+### Mehr Informationen
 
+* [Johnny-Five IR Reflectance Array Beispiel](http://johnny-five.io/examples/ir-reflect-array/)
+* [Johnny-Five Linienfolger Beispiel](http://johnny-five.io/examples/line-follower/)

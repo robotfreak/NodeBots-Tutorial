@@ -2,12 +2,8 @@
 
 In dieser Übung erweitern wir den vorhandenen Taster um zwei weitere Taster. Das besondere dabei, es wird weiterhin nur ein Eingangs Pin benötigt. Der Zustand der Taster wird über verschiedene LED Zustände angezeigt.
 
-Es werden neben Bauteile aus der vorhergehenden Übung werden zwei weitere Taster und zwei weitere Widerstände benötigt. Die Taster werden über ein Widerstandsnetzwerk am Analog Eingang A0 angeschlossen, die LED wie vorher auch an Pin 13.
+Es werden neben Bauteile aus der vorhergehenden Übung  zwei weitere Taster und zwei weitere Widerstände benötigt. Die Taster werden über ein Widerstandsnetzwerk am Analog Eingang A0 angeschlossen, die LED wie vorher auch an Pin 13.
 
-```shell
-node code/keypad-analog-ad.js`
-```
-Drücke `Control-D` um das Program zu beenden.
 
 ## Teileliste
 
@@ -33,7 +29,10 @@ Der Schaltplan:
 
 ## Programm
 
-Das Javascript Programm befindet sich unter `code/04-code-3xbutton.js`
+Das Javascript Programm befindet sich unter `code/keypad-analog-ad.js`. Es wird unter Linux mit `node ./code/keypad-analog-ad.js` unter Windows mit `node code\keypad-analog-ad.js` gestartet.
+
+Drücke `Control-D` um das Program zu beenden.
+
 
 ```javascript
 var five = require("johnny-five");
@@ -55,6 +54,7 @@ board.on("ready", function() {
   });
 });
 ```
+
 ## Mehr Informationen
 
 * [Johnny-Five Taster Beispiele](http://johnny-five.io/api/button/)

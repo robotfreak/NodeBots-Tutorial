@@ -58,3 +58,4 @@ Lege deine Hand über den Licht-Sensor um so das einfallende Licht abzuschatten.
 
 * [Johnny-Five Sensor Beispiele](http://johnny-five.io/examples/sensor/)
 * [Johnny-Five Sensor API](http://johnny-five.io/api/sensor)
+* [Johnny-Five LDR Beispiele](http://johnny-five.io/examples/photoresistor/)

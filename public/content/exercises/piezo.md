@@ -48,9 +48,9 @@ board.on("ready", function() {
 ```
 ### Übungen
 
-Es gibt noch mehr Songs. Lade das Programm ```j5-songs.js```. Probiere über das Terminal verschiedene Songs aus, z.B. ```piezo.play(songs.load('tetris-theme'))``` oder ```piezo.play(songs.load('mario-intro'))```. Die komplette Liste steht im Verzeichnis ```./node-modules/j5-songs/lib/songs```
+Es gibt noch mehr Songs. Lade das Programm `j5-songs.js`. Probiere über das Terminal verschiedene Songs aus, z.B. `piezo.play(songs.load('tetris-theme'))` oder `piezo.play(songs.load('mario-intro'))`. Die komplette Liste steht im Verzeichnis `./node-modules/j5-songs/lib/songs`
 
-### weiterführende Links
+### weitere Informationen
 
 * [Johnny-Five Piezo Examples](http://johnny-five.io/examples/piezo/)
 * [Johnny-Five Piezo API](http://johnny-five.io/api/piezo/)

@@ -12,18 +12,10 @@ Ein Servo ist ein kleiner Getriebemotor mit eingebauter Elektronik. Im Gegensatz
 
 ### Programm
 
-Das Programm lässt den Servo für 4 Sekunden schwenken. Es wird gestartet
+Das Programm lässt den Servo für 4 Sekunden schwenken. Es wird unter Linux mit `node ./code/servo.js` unter Windows mit `node code\servo.js` gestartet.
 
-unter Linux mit: 
+Drücke `Control-D` um das Program zu beenden.
 
-```
-node ./code/ldr-sensor.js
-```
-
-unter Windows mit:
-
-```
-node code\ldr-sensor.js
 ```
 
 ```javascript
@@ -55,7 +47,7 @@ board.on("ready", function() {
 
 ### Übungen
 
-NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere ```servo.center()```, ```servo.min()``` und ```servo.max()``` aus.
+NAch dem der Servo gestoppt hat, kann man über das Terminal den Servo steuern. Probiere `servo.center()`, `servo.min()` und `servo.max()` aus.
 
 ## Mehr Informationen
 
