@@ -2,6 +2,10 @@
 
 Mit 2 Servos kann sich der Roboterkopf in 2 Richtungen bewegen, Pan & Tilt (Schwenken und Neigen) ist hierzu der Fachbegriff aus der Videotechnik.
 
+Neben den Servos wird eine Halterung benötigt, um die Servos und den Kopf daran zu befestigen. Der untere Servo schwenkt die Halterung samt oberen Servo und den Kopf. Der ober Servo übernimmt das Neigen des Kopfes
+
+![Servo Pan/Tilt Kopf](../../images/servo-pan-tilt.jpg "Servo Pan/Tilt Kopf")
+
 ### Was wird benötigt?
 
 * 2 Standard Servos

@@ -10,7 +10,7 @@ Es gibt Sensoren für verschiedene Aufgaben, z.B. um Hindernisse zu erkennen ode
 
 * [Licht-Sensor](exercises/ldr)
 * [Ultraschall-Sensor](exercises/ultrasonic)
-* [Linien-Sensor](exercises/line-sensor] 
+* [Linien-Sensor](exercises/line-sensor)
 
 ## Weiterführende Themen
 

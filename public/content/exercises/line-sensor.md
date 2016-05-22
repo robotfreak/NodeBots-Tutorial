@@ -10,6 +10,8 @@ Mehrere Sensoren dieser Art lassen sich zu einem Sensor Array zusammenfassen. Da
 
 Normalerweise benötigen Linien-Sensoren zum Anschluss an den Mikrocontroller Analog Eingänge. Falls es analogen Eingängen mangelt, gibt es auch Linien Sensoren mit i2C Anschluss, wie das Sparkfun Line Sensor Array (8x Linen Sensor).
 
+![Sparfun Line Sensor Array](../../images/line-sensor.jpg "Line Sensor Array")
+
 ### Was wird benötigt?
 
 * [Sparkfun Line Sensor Array](https://www.sparkfun.com/products/13582)
