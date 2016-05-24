@@ -23,7 +23,7 @@ Normalerweise benötigen Linien-Sensoren zum Anschluss an den Mikrocontroller An
 
 ### Programm
 
-Das Sparkfun Line Sensor Array wird lieder nicht direkt von der Johny-Five Bibliothek unterstützt.
+Das Sparkfun Line Sensor Array wird leider nicht direkt von der Johny-Five Bibliothek unterstützt. Deshalb findet im Programm die Abfrage des Linien-Sensors direkt mit I2C Funktionen statt. Die Ausgabe der Sensorwerte erfolgt im Binärformat.
 
 ```javascript
 var five = require("johnny-five");
