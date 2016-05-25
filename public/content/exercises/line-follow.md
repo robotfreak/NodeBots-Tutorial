@@ -13,6 +13,9 @@ Ein Roboter der einer Linie auf dem Boden folgen kann
 
 ### Programm
 
+Das Programm läßt den Roboter zunächst vorwärts fahren solange die Linie sich unter den mittleren beiden Sesnoren befinden.
+Liegt die Linie weiter rechts oder links steuert der Roboter n die entsprechende Richtung. Es wird unter Linux mit `node ./code/line-folloe.js` unter Windows mit `node code\line-folloe.js` gestartet.
+
 ```javascript
 var five = require("johnny-five");
 var board = new five.Board();
