@@ -15,7 +15,7 @@ Ein Roboter der ferngesteuert werden kann und dabei ein Live Bild zum Web Browse
 
 ### Programm
 
-Über die Cursor Tasten kann der Roboter bewegt werden. Die Kamera kann mit den Tasten 'a' und 'd' geschwenkt, 'w' und 'x' geneigt und mit 's' in die Mittenposition gesteuert werden. Die Live Video Ausgabe erfolgt im Browser unter der Adresse 'http://localhost:8080/simple-stream.html'
+Über die Cursor Tasten kann der Roboter bewegt werden. Die Kamera kann mit den Tasten 'a' und 'd' geschwenkt, 'w' und 'x' geneigt und mit 's' in die Mittenposition gesteuert werden. Die Live Video Ausgabe erfolgt im Browser unter der Adresse 'http://localhost:8080/javascript-simple.html'
 
 Es wird unter Linux mit `node ./code/spy-cam.js` unter Windows mit `node code\spy-cam.js` gestartet.
 
@@ -37,22 +37,22 @@ board.on("ready", function() {
 
   function tiltDown() {
     if (tiltVal > 60) tiltVal -= 5;
-    servoTilt.set(tiltVal);
+    servoTilt.to(tiltVal);
   }
 
   function tiltUp() {
     if (tiltVal < 120) tiltVal += 5;
-    servoTilt.set(tiltVal);
+    servoTilt.to(tiltVal);
   }
 
   function panLeft() {
-    if (pantVal < 120) panVal += 5;
-    servoPan.set(pantVal);
+    if (panVal < 120) panVal += 5;
+    servoPan.to(panVal);
   }
 
   function panRight() {
-    if (pantVal > 60) panVal -= 5;
-    servoPan.set(pantVal);
+    if (panVal > 60) panVal -= 5;
+    servoPan.to(panVal);
   }
 
   function center() {
@@ -135,8 +135,8 @@ board.on("ready", function() {
     'w': tiltUp,
     'x': tiltDown,
     'a': panLeft,
-    's': panRight,
-    'x': center,
+    'd': panRight,
+    's': center,
     'q': exit
   };
 
