@@ -15,7 +15,7 @@ Dieses Beispiel stellt die Daten eines Ultraschall Sensors, der mit einem Servo 
 
 ### Programm
 
-Das Programm verwendet den Browser zur Darstellung der Radar Bildes. Öffne dazu ein Browser-Fenster mit der Adresse `http://localhost:8080` und starte dann das Programm unter Linux mit `node ./code/radar.js`, unter Windows mit `node code\radar.js`
+Das Programm verwendet den Browser zur Darstellung der Radar Bildes. Öffne dazu ein Browser-Fenster mit der Adresse `http://localhost:9000` und starte dann das Programm unter Linux mit `node ./code/radar.js`, unter Windows mit `node code\radar.js`
 
 ```javascript
 var five = require("johnny-five"),
@@ -58,7 +58,7 @@ board.on("ready", function() {
 
 
   // Open Radar view
-  child.exec("open http://localhost:8080/");
+  child.exec("open http://localhost:9000/");
 
   // Starting scanner scanning position (degrees)
   degrees = 21;
@@ -179,7 +179,7 @@ Des weiteren wird das ```radar-client.js``` benötigt. Dieses Programm bildet da
 
   var socket, radars, colors, addl;
 
-  socket = io.connect("http://localhost:8080");
+  socket = io.connect("http://localhost:9000");
   radars = [];
   colors = {
     // Color Constants
