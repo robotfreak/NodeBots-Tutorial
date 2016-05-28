@@ -36,6 +36,30 @@ var board = new five.Board();
 board.on("ready", function() {
   console.log('ready');
   var center, degrees, step, facing, range, scanner, soi, ping, last;
+
+  // Create a new generic sensor instance for
+  // a sensor connected to an analog (ADC) pin
+  var keyboard = new five.Sensor("A0");
+
+  // When the sensor value changes, log the value
+  keyboard.on("change", function() {
+    if (this.value < 20) {
+      console.log("rot");
+    }
+    else if (this.value > 120 && this.value < 140) {
+      console.log("grün");
+    }
+    else if (this.value > 340 && this.value < 360) {
+      console.log("blau");
+    }
+    else if (this.value > 545 && this.value < 565) {
+      console.log("gelb");
+    }
+    else if (this.value > 740 && this.value < 760) {
+      console.log("weiss");
+    }
+  });
+
   var leftLDRVal =  0;
   var rightLDRVal = 0;
   var ThresholdVal = 200;
