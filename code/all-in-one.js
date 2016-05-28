@@ -36,6 +36,20 @@ var board = new five.Board();
 board.on("ready", function() {
   console.log('ready');
   var center, degrees, step, facing, range, scanner, soi, ping, last;
+  var leftLDRVal =  0;
+  var rightLDRVal = 0;
+  var ThresholdVal = 200;
+
+  // Create the LDR sensors 
+  ldrLt = new five.Sensor({
+    pin: "A2",
+    freq: 100
+  });
+
+  ldrRt = new five.Sensor({
+    pin: "A3",
+    freq: 100
+  });
 
   // ping instance (distance detection)
   ping = new five.Proximity({
@@ -214,7 +228,34 @@ board.on("ready", function() {
     leftWheel.stop();
     rightWheel.stop();
     setTimeout(process.exit, 1000);
+  } 
+  
+   function checkLight() {
+    if (leftLDRVal - rightLDRVal >= ThresholdVal) {
+      right();
+    }
+    else if (rightLDRVal - leftLDRVal  >= ThresholdVal) {
+      left();
+    }
+    else {
+      forward();
+    }
   }
+
+  
+  ldrLt.on("change", function( err, value) {
+    console.log("Left : ", this.value);
+    leftLDRVal = this.value;
+   // checkLight();
+  });
+
+  ldrRt.on("change", function( err, value) {
+    console.log("Right: ", this.value);
+    rightLDRVal = this.value;
+   // checkLight();
+  });
+
+  
 
   var keyMap = {
     'up': forward,
