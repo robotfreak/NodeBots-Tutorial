@@ -401,6 +401,25 @@ board.on("ready", function() {
    }
   });
   
+    board.loop(100, function() {
+      if botMode == "LINE_FOLLOW" {
+        doLineFollow();
+      }
+      else if botMode == "LIGHT_FOLLOW" {
+        doLightFollow
+      }
+      else if botMode == "COLLISION_DETECT" {
+        doCollisionDetect();
+      }
+      else if botMode == "SHOW_RADAR" {
+        doShowRadar();
+      }
+      else if botMode == "SHOW_SENSORS" {
+        doShowSensors();
+      } 
+    }
+
+  
     var keyMap = {
     'up': forward,
     'down': reverse,
