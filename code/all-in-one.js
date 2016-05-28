@@ -311,8 +311,8 @@ board.on("ready", function() {
     'w': tiltUp,
     'x': tiltDown,
     'a': panLeft,
-    's': panRight,
-    'x': center,
+    'd': panRight,
+    's': center,
     'q': exit
   };
 
