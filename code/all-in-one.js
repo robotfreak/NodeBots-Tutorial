@@ -182,7 +182,8 @@ board.on("ready", function() {
 
   function forward() {
     leftWheel.forward(speed);
-    rightWheel.forward(speed);
+    rightWheel.forward(speed);   
+    state = "DRIVING";
     console.log("forward");
   }
 
@@ -256,8 +257,52 @@ board.on("ready", function() {
   });
 
   
+  var state = "STOP";
+  
+  function initCollisionDetect() {
+    state = "DRIVING";
+    forward();
+  }
 
-  var keyMap = {
+  function checkCollison { 
+    if (this.cm < 15 && state == "DRIVING") {
+      state = "AVOID_COLLISION"
+      temporal.queue([ //<3>
+      {
+         // stop del           
+         delay: 10,
+         task: stop,
+      },
+      {
+         // back up
+         delay: 3000,
+         task: backward,
+      },
+      {
+         // stop
+         delay: 1500,
+         task: stop,
+       },
+       {
+         // spin
+         delay: 3000,
+         task: spin, 
+       },
+       {
+         // stop
+         delay: 1000,
+         task: stop,
+       },
+       {
+         // fwd
+         delay: 3000,
+         task: forward, //<4>
+       },
+     ])
+   }
+  });
+  
+    var keyMap = {
     'up': forward,
     'down': reverse,
     'left': left,
