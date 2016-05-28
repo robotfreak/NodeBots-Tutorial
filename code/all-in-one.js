@@ -40,23 +40,29 @@ board.on("ready", function() {
   // Create a new generic sensor instance for
   // a sensor connected to an analog (ADC) pin
   var keyboard = new five.Sensor("A0");
-
+  
+  var botMode = "SHOW_SENSORS";
   // When the sensor value changes, log the value
   keyboard.on("change", function() {
     if (this.value < 20) {
       console.log("rot");
+      botMode = "SHOW_SENSORS";
     }
     else if (this.value > 120 && this.value < 140) {
       console.log("grün");
+      botMode = "SHOW_RADAR";
     }
     else if (this.value > 340 && this.value < 360) {
       console.log("blau");
+      botMode = "COLLISION_DETECT";
     }
     else if (this.value > 545 && this.value < 565) {
       console.log("gelb");
+      botMode = "LIGHT_FOLLOW";
     }
     else if (this.value > 740 && this.value < 760) {
       console.log("weiss");
+      botMode = "LINE_FOLLOW";
     }
   });
 
