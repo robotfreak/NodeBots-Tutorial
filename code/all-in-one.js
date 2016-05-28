@@ -47,6 +47,7 @@ board.on("ready", function() {
     if (this.value < 20) {
       console.log("rot");
       botMode = "SHOW_SENSORS";
+      initShowSensors();
     }
     else if (this.value > 120 && this.value < 140) {
       console.log("grün");
@@ -55,14 +56,17 @@ board.on("ready", function() {
     else if (this.value > 340 && this.value < 360) {
       console.log("blau");
       botMode = "COLLISION_DETECT";
+      initCollisionDetect();
     }
     else if (this.value > 545 && this.value < 565) {
       console.log("gelb");
       botMode = "LIGHT_FOLLOW";
+      initLghtFollow();
     }
     else if (this.value > 740 && this.value < 760) {
       console.log("weiss");
       botMode = "LINE_FOLLOW";
+      initLineFollow();
     }
   });
 
@@ -81,6 +85,8 @@ board.on("ready", function() {
     freq: 100
   });
 
+  var distanceCM;
+  
   // ping instance (distance detection)
   ping = new five.Proximity({
     controller: "MB1000",
@@ -286,16 +292,79 @@ board.on("ready", function() {
    // checkLight();
   });
 
+    var register = {
+        PULLUPB: 0x06,
+        PULLUPA: 0x07,
+        DIRB: 0x0E,
+        DIRA: 0x0F,
+        DATAB: 0x10,
+        DATAA: 0x11,
+        INTMASKA: 0x13,
+        MISC: 0x1E,
+        CLOCK: 0x1F,
+        RESET: 0x7D
+  };
+
+  var address = 0x3E;
+  console.log("address: ", address);
+  function initLineFollow() {
+  this.i2cConfig();
+  // Reset
+  this.i2cWriteReg(address, register.RESET, 0x12);
+  this.i2cWriteReg(address, register.RESET, 0x34);
+  this.i2cReadOnce(address, register.INTMASKA, 2, function(data) {
+    var value;
+    value = (data[0] << 8) + data[1];
+    console.log("read: ", value);
+  });
+  // Port A all Input
+  this.i2cWriteReg(address, register.DIRA, 0xFF);
+  // Port B Input 0,1 output, 2..7 Input
+  this.i2cWriteReg(address, register.DIRB, 0xFC);
+  // Port B IR LED off, FB LED on
+  this.i2cWriteReg(address, register.DATAB, 0x01);
+  // Port B IR LED on, FB LED off
+  //this.wait(1, function() { 
+  this.i2cWriteReg(address, register.DATAB, 0x02); 
+  //});
+  }
   
+  function doLineFollow {
+    //this.wait(2, function() { 
+      // Port B IR LED on, FB LED on
+    this.i2cWriteReg(address, register.DATAB, 0x00); 
+    //;
+    this.i2cReadOnce(address, register.DATAA, 1, function(data) {
+      var value;
+      value = data[0];
+      console.log("read: ", value.toString(2));
+      if (value & 0x18) { // on line
+        forward();
+      }
+      else if (value & 0x06) { // right
+        right();
+      }
+      else if (value & 0x60) { // left
+        left();
+      }
+    });
+    // Port B IR LED off, FB LED off
+    //this.i2cWriteReg(address, register.DATAB, 0x03);  
+  };
+
   var state = "STOP";
   
   function initCollisionDetect() {
     state = "DRIVING";
     forward();
   }
+  
+  ping.on("change", function() { //<2>
+    distanceCM = this.cm
+  }
 
-  function checkCollison { 
-    if (this.cm < 15 && state == "DRIVING") {
+  function doCollisonDetect { 
+    if (distanceCM < 15 && state == "DRIVING") {
       state = "AVOID_COLLISION"
       temporal.queue([ //<3>
       {
