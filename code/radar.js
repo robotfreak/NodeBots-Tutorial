@@ -128,6 +128,11 @@ board.on("ready", function() {
   // Servo center point (degrees)
   center = range[1] / 2;
 
+  var digits = new five.Led.Digits({
+    controller: "HT16K33",
+    addresses: [0x74]
+  });
+
   // ping instance (distance detection)
   ping = new five.Proximity({
     controller: "MB1000",
@@ -153,7 +158,7 @@ board.on("ready", function() {
 
   // Initialize the robot face
   eyeLt.draw(Eyes.roundEye);
-  eyeRt.draw(Eyes.targetEye);
+  eyeRt.draw(Eyes.roundEye);
   mouthLt.draw(smileLt);
   mouthRt.draw(smileRt);
 
@@ -199,7 +204,9 @@ board.on("ready", function() {
     soi = socket;
 
     ping.on("data", function() {
-
+      var fixed_num = parseFloat(this.cm).toFixed( 1 );
+      digits.print(fixed_num);
+ 
       if (last !== degrees) {
         io.sockets.emit("ping", {
           degrees: degrees,
