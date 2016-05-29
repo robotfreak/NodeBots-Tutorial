@@ -83,6 +83,38 @@ board.on("ready", function() {
     "00011000",
     "00011000"
     ],
+    ovalEye: [
+    "00000000",
+    "00111100",
+    "01111110",
+    "11100111",
+    "11100111",
+    "01111110",
+    "00111100",
+    "00000000"
+    ],
+
+    ovalBigEye: [
+    "00000000",
+    "00111100",
+    "01100110",
+    "11000011",
+    "11000011",
+    "01100110",
+    "00111100",
+    "00000000"
+    ],
+
+    closeEye: [
+    "00000000",
+    "00000000",
+    "00111100",
+    "11111111",
+    "11111111",
+    "00111100",
+    "00000000",
+    "00000000"
+    ],
 
   };
 
@@ -157,11 +189,20 @@ board.on("ready", function() {
   });
 
   // Initialize the robot face
-  eyeLt.draw(Eyes.roundEye);
-  eyeRt.draw(Eyes.roundEye);
-  mouthLt.draw(smileLt);
-  mouthRt.draw(smileRt);
+  function smiley() {
+    eyeLt.draw(Eyes.roundEye);
+    eyeRt.draw(Eyes.roundEye);
+    mouthLt.draw(smileLt);
+    mouthRt.draw(smileRt);
+  };
+  
+   function twinkle() { 
+    eyeLt.draw(Eyes.ovalEye);
+    eyeLt.draw(Eyes.closeEye);
+    eyeLt.draw(Eyes.roundEye);
+  };
 
+  smiley();
   // Initialize the scanner servo at minimum
   scanner.min();
   // Initialize the tilt servo at center
@@ -186,7 +227,8 @@ board.on("ready", function() {
         degrees = 20;
         step = 1;
         last = -1;
-      } else {
+        twinkle();
+        } else {
         step *= -1;
       }
     }
