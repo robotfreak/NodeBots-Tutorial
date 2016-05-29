@@ -212,7 +212,7 @@ board.on("ready", function() {
     eyeRt.draw(Eyes.closeEye);
     mouthLt.draw(grumpyLt);
     mouthRt.draw(grumpyRt);
-  });
+  };
  
   function wakeup() {
     servoPan.min();
@@ -222,7 +222,7 @@ board.on("ready", function() {
     eyeRt.draw(Eyes.roundEye);
     mouthLt.draw(smileLt);
     mouthRt.draw(smileRt);
-  });
+  };
  
   function playsong() {
     // Play it ! 
@@ -230,7 +230,7 @@ board.on("ready", function() {
     servoPan.sweep({
         range: [40, 60]
     });
-  });
+  };
 
 
  function twinkle() { 
@@ -238,17 +238,8 @@ board.on("ready", function() {
     eyeLt.draw(Eyes.ovalEye);
     eyeLt.draw(Eyes.closeEye);
     eyeLt.draw(Eyes.roundEye);
-  });
+  };
 
-  this.wait(48000, function() {
-    servoPan.center();
-    servoTilt.max();
-
-    eyeLt.draw(Eyes.closeEye);
-    eyeRt.draw(Eyes.closeEye);
-    mouthLt.draw(grumpyLt);
-    mouthRt.draw(grumpyRt);
-  });
   };
 });
 
