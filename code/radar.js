@@ -212,7 +212,7 @@ board.on("ready", function() {
   this.loop(100, function() {
     var bounds, isOver, isUnder;
 
-    if (degrees == 21) {
+    if (degrees == 25 || degrees == 45) {
       twinkle();
     }
     
