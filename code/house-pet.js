@@ -174,8 +174,37 @@ board.on("ready", function() {
   function doNyanCat() {
   // Load a song object 
   var song = songs.load('nyan-melody');
+      temporal.queue([ //<3>
+      {
+         // stop del           
+         delay: 10,
+         task: sleep,
+      },
+      {
+         // back up
+         delay: 5000,
+         task: wakeup,
+      },
+      {
+         // back up
+         delay: 2000,
+         task: playsong,
+      },
+      {
+         // back up
+         delay: 33000,
+         task: twinkle,
+      },
+      {
+         // go to slepp
+         delay: 3000,
+         task: sleep,
+      },
+   ])
+  };
 
-  this.wait(5000, function() {
+
+  function sleep() {
     servoPan.center();
     servoTilt.max();
 
@@ -185,7 +214,7 @@ board.on("ready", function() {
     mouthRt.draw(grumpyRt);
   });
  
-  this.wait(10000, function() {
+  function wakeup() {
     servoPan.min();
     servoTilt.center();
   
@@ -195,7 +224,7 @@ board.on("ready", function() {
     mouthRt.draw(smileRt);
   });
  
-  this.wait(12000, function() {
+  function playsong() {
     // Play it ! 
     piezo.play(song);
     servoPan.sweep({
@@ -204,7 +233,7 @@ board.on("ready", function() {
   });
 
 
-  this.wait(45000, function() {
+ function twinkle() { 
     servoPan.stop();
     eyeLt.draw(Eyes.ovalEye);
     eyeLt.draw(Eyes.closeEye);
