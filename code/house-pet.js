@@ -194,7 +194,7 @@ board.on("ready", function() {
       },
       {
          // back up
-         delay: 33000,
+         delay: 40000,
          task: twinkle,
       },
       {
