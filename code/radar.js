@@ -198,7 +198,7 @@ board.on("ready", function() {
   
    function twinkle() { 
     eyeRt.draw(Eyes.ovalEye);
-    eyeTt.draw(Eyes.closeEye);
+    eyeRt.draw(Eyes.closeEye);
     eyeRt.draw(Eyes.roundEye);
   };
 
