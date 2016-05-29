@@ -26,7 +26,7 @@ function handler(req, res) {
 }
 
 app = http.createServer(handler);
-app.listen(8080);
+app.listen(9000);
 
 io = socket.listen(app);
 io.set("log level", 1);
