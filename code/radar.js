@@ -197,9 +197,9 @@ board.on("ready", function() {
   };
   
    function twinkle() { 
-    eyeLt.draw(Eyes.ovalEye);
-    eyeLt.draw(Eyes.closeEye);
-    eyeLt.draw(Eyes.roundEye);
+    eyeRt.draw(Eyes.ovalEye);
+    eyeTt.draw(Eyes.closeEye);
+    eyeRt.draw(Eyes.roundEye);
   };
 
   smiley();
@@ -212,6 +212,10 @@ board.on("ready", function() {
   this.loop(100, function() {
     var bounds, isOver, isUnder;
 
+    if (degrees == 21) {
+      twinkle();
+    }
+    
     bounds = {
       left: center + 5,
       right: center - 5
@@ -227,7 +231,6 @@ board.on("ready", function() {
         degrees = 20;
         step = 1;
         last = -1;
-        twinkle();
         } else {
         step *= -1;
       }
