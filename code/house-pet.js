@@ -170,13 +170,13 @@ board.on("ready", function() {
     console.log("-----------------");
   });
 
-  
+  var song = songs.load('nyan-melody');
+ 
   doNyanCat();
   
   function doNyanCat() {
   // Load a song object 
-  var song = songs.load('nyan-melody');
-      temporal.queue([ //<3>
+    temporal.queue([ //<3>
       {
          // stop del           
          delay: 10,
