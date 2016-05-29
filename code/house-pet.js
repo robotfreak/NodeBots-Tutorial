@@ -240,6 +240,5 @@ board.on("ready", function() {
     eyeLt.draw(Eyes.roundEye);
   };
 
-  };
 });
 
