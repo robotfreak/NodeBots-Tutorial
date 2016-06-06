@@ -13,8 +13,8 @@ Cylon.robot({
 
   work: function(my) {
     after(1..second(), function() { my.voice.say("Hello my name is robocat."); });
-    after(2..second(), function() { my.voice.say("I'm a Nodebot, programmed in Javascript."); });
-    after(3..second(), function() { my.voice.say("Using the node.js and johnny five library."); });
+    after(5..second(), function() { my.voice.say("I'm a Nodebot, programmed in Javascript."); });
+    after(10..second(), function() { my.voice.say("Using the node.js and johnny five library."); });
   }
 }).start();
 
