@@ -64,3 +64,7 @@ Dieses Tutorial basiert auf Beispielen von:
 
 https://github.com/AnnaGerber/node-ardx
 https://github.com/rwaldron/johnny-five
+
+## Lizens
+
+Copyright (c) 2016 Peter Recktenwald p.recktenwald@gmail.com Licensed under the MIT license.
