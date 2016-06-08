@@ -62,8 +62,8 @@ node code\example.js
 
 Dieses Tutorial basiert auf Beispielen von:
 
-https://github.com/AnnaGerber/node-ardx
-https://github.com/rwaldron/johnny-five
+* https://github.com/AnnaGerber/node-ardx
+* https://github.com/rwaldron/johnny-five
 
 ## Lizens
 
