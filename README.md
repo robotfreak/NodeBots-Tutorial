@@ -14,7 +14,22 @@ https://nodejs.org/en/
 
 Nach dem Download und auspacken des Archives die notwendigen Node Module aus dem Installations Verzeichnis installieren:
 
-Für Linux:
+Für Linux (Ubuntu/Debian):
+
+1. Node.js Installation:
+
+```
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+2. Einige Pakete müssen vor der Installation übersetzt werden. Dazu werden die Built-Tools benötigt:
+
+```
+sudo apt-get install -y build-essential
+```
+
+3. NodeBots-Tutorial Installation:
 
 ```
 git clone git://github.com/robotfreak/NodeBots-Tutorial
@@ -22,7 +37,11 @@ cd ./NodeBots-Tutorial
 npm install
 ```
 
-Für Windows [Archiv](https://github.com/robotfreak/NodeBots-Tutorial/archive/master.zip) downloaden, und entpacken nach NodeBots-Tutorial
+Für Windows 
+
+1. Node.js Installation. Download und Installation des [Node.js-Installers](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x86.msi)
+
+2. Das [Archiv](https://github.com/robotfreak/NodeBots-Tutorial/archive/master.zip) downloaden, und entpacken nach NodeBots-Tutorial
 
 ```
 cd NodeBots-Tutorial
