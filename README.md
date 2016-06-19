@@ -17,15 +17,15 @@ Nach dem Download und auspacken des Archives die notwendigen Node Module aus dem
 Für Linux:
 
 ```
-git clone https://github.com/robotfreak/NodeBotsTutorial
-cd ./NodeBotsTutorial
+git clone git://github.com/robotfreak/NodeBots-Tutorial
+cd ./NodeBots-Tutorial
 npm install
 ```
 
-Für Windows [Archiv](https://github.com/robotfreak/NodeBots-Tutorial/archive/master.zip) downloaden, und entpacken nach NodeBotsTutorial
+Für Windows [Archiv](https://github.com/robotfreak/NodeBots-Tutorial/archive/master.zip) downloaden, und entpacken nach NodeBots-Tutorial
 
 ```
-cd NodeBotsTutorial
+cd NodeBots-Tutorial
 npm install
 ```
 
